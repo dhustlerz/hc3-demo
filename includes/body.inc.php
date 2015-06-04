@@ -2,6 +2,7 @@
         <div  class="page-container">
 
             <?php
+            $request_URI = "$_SERVER[REQUEST_URI]";
 
              // START PAGE SIDEBAR
              include 'sidebar.inc.php' ;
@@ -9,7 +10,13 @@
 
              // PAGE CONTENT -->
              echo'<div class="page-content">';
-             include 'content.inc.php';
+             if ($request_URI == '/hc3-demo/overview.php') {
+                include 'content.inc.php';
+             }
+             elseif ($request_URI == '/hc3-demo/needs-assessment.php') {
+                 include 'content-needs-assesment.inc.php';
+             }
+
              echo '</div>';
              // END PAGE CONTENT -->
 

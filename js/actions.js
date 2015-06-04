@@ -602,7 +602,7 @@ var morrisCharts = function() {
         xkey: 'y',
         ykeys: ['a', 'b'],
         labels: ['Series A', 'Series B'],
-        barColors: ['#7A92A3', '#0B62A4']
+        barColors: ['#5bbbff', '#003459']
     });
 }();
 

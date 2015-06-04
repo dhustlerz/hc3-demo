@@ -52,7 +52,7 @@ $sidebar_output.='<div class="page-sidebar bg-1865a9">';
       $sidebar_output.='</li>';
       $sidebar_output.='<li class="">';
           $sidebar_output.='<li class="menu">';
-              $sidebar_output.='<a href="#"><span class="fa fa-user-md"></span><span class="xn-text">Needs Assessment</span></a>';
+              $sidebar_output.='<a href="needs-assessment.php"><span class="fa fa-user-md"></span><span class="xn-text">Needs Assessment</span></a>';
 
           $sidebar_output.='</li>';
           $sidebar_output.='<li class="menu xn-openable">';

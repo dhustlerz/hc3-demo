@@ -41,8 +41,9 @@ var morrisCharts = function() {
         ykeys: ['a', 'b'],
         labels: ['Series A', 'Series B'],
         resize: true,
-        lineColors: ['#3FBAE4', '#FEA223']
+        lineColors: ['#5bbbff', '#003459']
     });
+
 
 
 
