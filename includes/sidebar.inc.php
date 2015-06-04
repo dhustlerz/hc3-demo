@@ -9,7 +9,7 @@ $sidebar_output.='<div class="page-sidebar bg-1865a9">';
 
    $sidebar_output.='<li class="xn-logo">';
 
-          $sidebar_output.='<a href="dashboard.php">Flexxia</a>';
+          $sidebar_output.='<a href="overview.php">Flexxia</a>';
           $sidebar_output.='<a href="#" class="x-navigation-control"></a>';
           $sidebar_output.='<a href="#" class="reportrange x-navigation-datepicker"></a>';
       $sidebar_output.='</li>';
