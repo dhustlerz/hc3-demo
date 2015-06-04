@@ -1,5 +1,5 @@
   /* gauge.js start */
-if (window.location.pathname+window.location.search == '/hc3-demo/overview.php') {
+if (window.location.pathname+window.location.search == '/demo/hc3-demo/overview.php') {
   console.log('working');
   gaugejs("dashboard-gauge","dashboard-gauge-font",90);
 }
