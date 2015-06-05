@@ -155,5 +155,66 @@
       ]
     }
   ]
+  },
+    {
+    "data3" : [
+      {
+        "key": "Pre meetings",
+        "visible": false,
+        "color": "#5bbbff",
+        "values": [
+          {
+            "x" : "I am Not interested" ,
+            "y" : 60
+          } ,
+          {
+            "x" : "I see the need but..." ,
+            "y" : 80
+          } ,
+          {
+            "x" : "I would like to learn more" ,
+            "y" : 90
+          } ,
+          {
+            "x" : "I am ready to do this" ,
+            "y" : 70
+          } ,
+          {
+            "x" : "I do this consistently" ,
+            "y" : 50
+          }
+
+        ]
+      },
+      {
+        "key": "Post meetings",
+        "visible": true,
+        "color": "#003459",
+        "values": [
+          {
+            "x" : "I am Not interested" ,
+            "y" : 100
+          } ,
+          {
+            "x" : "I see the need but..." ,
+            "y" : 90
+          } ,
+          {
+            "x" : "I would like to learn more" ,
+            "y" : 95
+          } ,
+          {
+            "x" : "I am ready to do this" ,
+            "y" : 85
+          } ,
+          {
+            "x" : "I do this consistently" ,
+            "y" : 70
+          }
+
+        ]
+      }
+    ]
   }
+
 ]

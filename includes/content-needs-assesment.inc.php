@@ -112,7 +112,7 @@ $output.='<div class="page-content-wrap ">';
           $output.='<div class=" panel-header">Business Unit Performance </div>';
               $output.='<div class="col-md-2 "></div>';
               $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 300px;">';
-                  $output.='<div class="" id="chart-5pt3" style="height: 300px;"><svg></svg></div>';
+                  $output.='<div class="" id="chart-5" style="height: 300px;"><svg></svg></div>';
               $output.='</div>';
               $output.='<div class="col-md-2 "></div>';
           $output.='</div>';
@@ -147,7 +147,8 @@ $output.='<div class="page-content-wrap ">';
             $output.='<div class="panel ">';
             $output.='<div class=" panel-header">Learning Preference</div>';
                 $output.='<div class="panel-body">';
-                    $output.='<div id="morris-bar-example" style="height: 300px;"></div>';
+                    $output.='<div class="text-center font-size-14 font-family-open-sans">What is your preferred way of Participating in CHE ? </div>';
+                    $output.='<div id="google-column-bar-chart" style=" height: 300px;"></div>';
                 $output.='</div>';
             $output.='</div>';
             /**
@@ -160,9 +161,12 @@ $output.='<div class="page-content-wrap ">';
              * START REGULAR PIE CHART
              */
             $output.='<div class="panel ">';
-            $output.='<div class=" panel-header">Non-Accredited Program Breakdown </div>';
-                $output.='<div class="panel-body bg-ffffff" ">';
-                    $output.='<div class="" id="chart-10" style="height: 300px;"><svg></svg></div>';
+            $output.='<div class=" panel-header">Poll Question</div>';
+                $output.='<div class="text-center panel-body bg-ffffff"  ">';
+                $output.='<div class="text-center font-size-14">I am more likely to participate in it accredited CHE</div>';
+                 $output.='<div class="padding-top-50" style=" height: 300px;">';
+                   $output.='<input class="knob" data-width="200" data-min="-100" data-linecap=round data-thickness=".2" data-fgColor="#5bbbff" data-displayPrevious=true value="80"/>';
+                 $output.='</div>';
                 $output.='</div>';
             $output.='</div>';
             /**
@@ -202,9 +206,10 @@ $output.='<div class="page-content-wrap ">';
            * START REGULAR PIE CHART
            */
           $output.='<div class="panel ">';
-          $output.='<div class=" panel-header">Title </div>';
-            $output.='<div class="panel-body bg-ffffff" style="height: 300px;">';
-               //$output.='<div class="" id="chart-5pt4" style="height: 300px;"><svg></svg></div>';
+          $output.='<div class=" panel-header">Current Challenges</div>';
+            $output.='<div class="panel-body bg-ffffff" >';
+              $output.='<div class="text-center font-size-14 font-family-open-sans">Top 5 challenges managing patients with type 2 Diabetes</div>';
+              $output.='<div id="google-pie-chart" style=" height: 300px;"></div>';
             $output.='</div>';
           $output.='</div>';
           /**
@@ -218,7 +223,8 @@ $output.='<div class="page-content-wrap ">';
              */
             $output.='<div class="panel ">';
             $output.='<div class=" panel-header">Title</div>';
-               $output.='<div class="panel-body bg-ffffff" style="height: 300px;">';
+              $output.='<div class="panel-body bg-ffffff" style="height: 300px;">';
+              $output.='<div class="text-center font-size-14 font-family-open-sans">I Would Like Diabetes Education To Increase My Ability To: </div>';
                     //$output.='<div id="google-stacked-chart" style=" height: 300px;"></div>';
                 $output.='</div>';
             $output.='</div>';

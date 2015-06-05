@@ -279,17 +279,80 @@ var nvd3Charts = function() {
         .stacked(true);
 				//Allow user to switch between "Grouped" and "Stacked" mode.
 
-				chart2.yAxis.tickFormat(d3.format(',f'));
+
+				chart2.yAxis.tickFormat(d3.format(',r'));
 				/*
 			   * Chart two ends
 				 */
+
+			 /*
+		    * Chart three start
+			  */
+				var chart3 = nv.models.multiBarHorizontalChart()
+
+				.x(function(d) {return d.x;})
+				.y(function(d) {return d.y;})
+
+				.margin({
+					top : 40,
+					right : 20,
+					bottom : 50,
+					left :150
+				}).showValues(true)//Show bar value next to each bar.
+				.tooltips(true)//Show tooltips on hover.
+
+				.transitionDuration(350)
+        .showControls(false)
+        .color(['#aec7e8', '#7b94b5'])
+        .stacked(true);
+				//Allow user to switch between "Grouped" and "Stacked" mode.
+
+
+				chart3.yAxis.tickFormat(d3.format(',f'));
+				/*
+			   * Chart three ends
+				 */
+			 /*
+		    * Chart Four start
+			  */
+				var chart4 = nv.models.multiBarHorizontalChart()
+
+				.x(function(d) {return d.x;})
+				.y(function(d) {return d.y;})
+
+				.margin({
+					top : 40,
+					right : 20,
+					bottom : 50,
+					left :150
+				}).showValues(true)//Show bar value next to each bar.
+				.tooltips(true)//Show tooltips on hover.
+
+				.transitionDuration(350)
+        .showControls(false)
+        .color(['#aec7e8', '#7b94b5'])
+        .stacked(true);
+				//Allow user to switch between "Grouped" and "Stacked" mode.
+
+
+				chart3.yAxis.tickFormat(d3.format(',f'));
+				/*
+			   * Chart Four ends
+				 */
 				d3.select('#chart-5 svg').datum(data[0].data1).call(chart1);
 
-				d3.select('#chart-5pt2 svg').datum(data[1].data2).call(chart2);
-
-				d3.select('#chart-5pt3 svg').datum(data[1].data2).call(chart2);
-
+				d3.select('#chart-5pt2 svg').datum(data[2].data3).call(chart4);
 				d3.select('#chart-5pt4 svg').datum(data[1].data2).call(chart2);
+
+				d3.select('#chart-5pt3 svg').datum(data[2].data3).call(chart3);
+				// .each("end", function() {
+	   //      d3.select("g.nv-legendWrap").selectAll("g.nv-series")
+	   //          .filter(function(d) { return d.visible == false; })
+	   //          .each(function(d) {
+	   //              this.dispatchEvent(new Event("click"));
+	   //          });
+	   //      });
+
 
 
 

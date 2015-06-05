@@ -591,20 +591,25 @@ var morrisCharts = function() {
         Morris.Bar({
         element: 'morris-bar-example',
         data: [
-            { y: '2006', a: 100, b: 90 },
-            { y: '2007', a: 75,  b: 65 },
-            { y: '2008', a: 50,  b: 40 },
-            { y: '2009', a: 75,  b: 65 },
-            { y: '2010', a: 50,  b: 40 },
-            { y: '2011', a: 75,  b: 65 },
-            { y: '2012', a: 100, b: 90 }
+            { y: 'Online Courses', b: 25 },
+            { y: 'Self Learning', b: 18 },
+            { y: 'Symposia', b: 16 },
+            { y: 'Interactive Cases', b: 15 },
+            { y: 'Mixed topic education', b: 13 },
+            { y: 'Webinars', b: 11 },
+            { y: 'Others', b: 2 }
+
         ],
         xkey: 'y',
-        ykeys: ['a', 'b'],
-        labels: ['Series A', 'Series B'],
-        barColors: ['#5bbbff', '#003459']
+        ykeys: ['b'],
+        labels: [ 'Series B'],
+        barColors: [ '#003459']
     });
 }();
+
+
+
+
 
 
 

@@ -202,9 +202,10 @@ $output.='<div class="page-content-wrap ">';
            * START REGULAR PIE CHART
            */
           $output.='<div class="panel ">';
-          $output.='<div class=" panel-header">Educational Event by Province </div>';
-            $output.='<div class="panel-body bg-ffffff" style="height: 300px;">';
-                $output.='<div class="" id="chart-5pt2" style="height: 300px;"><svg></svg></div>';
+          $output.='<div class=" panel-header">Behavior change </div>';
+            $output.='<div class="panel-body bg-ffffff" style="height: 350px;">';
+              $output.='<div class="text-center font-size-14 font-family-open-sans">Define the Potential impact of new approaches to patient care, as proposed by the latest clinical trials </div>';
+              $output.='<div class="padding-top-30" id="chart-5pt2" style="height: 300px;"><svg></svg></div>';
             $output.='</div>';
           $output.='</div>';
           /**
@@ -217,9 +218,10 @@ $output.='<div class="page-content-wrap ">';
            * START REGULAR PIE CHART
            */
           $output.='<div class="panel ">';
-          $output.='<div class=" panel-header">Educational Event by Province </div>';
-            $output.='<div class="panel-body bg-ffffff" style="height: 300px;">';
-                $output.='<div class="" id="chart-5pt3" style="height: 300px;"><svg></svg></div>';
+          $output.='<div class=" panel-header">Behavior change </div>';
+            $output.='<div class="panel-body bg-ffffff" style="height: 350px;">';
+              $output.='<div class="text-center font-size-14 font-family-open-sans">Summarize the key trials / trial outcome that were presented ASH 2014 from the Canadian Oncology Pharmacist perspective  </div>';
+              $output.='<div class="padding-top-30" id="chart-5pt3" style="height: 300px;"><svg></svg></div>';
             $output.='</div>';
           $output.='</div>';
           /**

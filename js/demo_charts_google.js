@@ -1,6 +1,76 @@
 googlecharts();
 function googlecharts() {
 
+    /*
+     * Google Pie Chart
+     */
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(googlePieChart);
+      function googlePieChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Fear of Needles', 'Hours per Day'],
+          ['Initiation Treatment',     19],
+          ['Patient Compliance',      14],
+          ['Medication Choice',  25],
+          ['Diet Exercise', 12],
+          ['Sleep',    30]
+        ]);
+
+        var options = {
+          height: 300,
+           colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('google-pie-chart'));
+
+        chart.draw(data, options);
+      }
+    /*
+     * Google Column chart
+     */
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(googleColumnBarChart);
+    function googleColumnBarChart() {
+
+
+      var data = google.visualization.arrayToDataTable([
+        ["Element", "", { role: "style" } ],
+        ["Self Learning", 25, "#5bbbff"],
+        ["Online Courses", 18, "#5bbbff"],
+        ["Symposia", 16, "#5bbbff"],
+        ["Interactive Cases", 15, "#5bbbff"],
+        ["Mixed topic education", 13, "color: #5bbbff"],
+        ["Webinars", 11, "color: #5bbbff"],
+        ["Others", 2, "color: #5bbbff"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+
+
+        height: 300,
+        bar: {groupWidth: "55%"},
+        legend: { position: "none" },
+        vAxis: {format: '#\'%\''}
+        //isStacked: true,
+        // vAxis:   {
+
+        //   maxValue: 100
+        // } ,
+
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("google-column-bar-chart"));
+      chart.draw(view, options);
+    }
+
 //var googleStackedChart = function() {
   google.load("visualization", "1", {packages:["corechart"]});
   google.setOnLoadCallback(drawGoogleStackedChart);
@@ -139,6 +209,7 @@ function googlecharts() {
         chart.draw(view, options);
 //}
     }
+
 
 }
 
