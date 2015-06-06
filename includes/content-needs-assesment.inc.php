@@ -209,7 +209,7 @@ $output.='<div class="page-content-wrap ">';
           $output.='<div class=" panel-header">Current Challenges</div>';
             $output.='<div class="panel-body bg-ffffff" >';
               $output.='<div class="text-center font-size-14 font-family-open-sans">Top 5 challenges managing patients with type 2 Diabetes</div>';
-              $output.='<div id="google-pie-chart" style=" height: 300px;"></div>';
+              $output.='<div id="google-pie-chart" style=" height: 320px;"></div>';
             $output.='</div>';
           $output.='</div>';
           /**
@@ -222,10 +222,46 @@ $output.='<div class="page-content-wrap ">';
              * START REGULAR PIE CHART
              */
             $output.='<div class="panel ">';
-            $output.='<div class=" panel-header">Title</div>';
-              $output.='<div class="panel-body bg-ffffff" style="height: 300px;">';
-              $output.='<div class="text-center font-size-14 font-family-open-sans">I Would Like Diabetes Education To Increase My Ability To: </div>';
+            $output.='<div class=" panel-header">Desired Educaion Topics</div>';
+              $output.='<div class="panel-body bg-ffffff" style="height: 370px;">';
+              $output.='<div class="text-center font-size-14 font-family-open-sans margin-bottom-15">I Would Like Diabetes Education To Increase My Ability To: </div>';
                     //$output.='<div id="google-stacked-chart" style=" height: 300px;"></div>';
+               $output.='<div class="font-size-14 font-family-open-sans">Educate and counsel patients <span class="float-right">80%</span></div>';
+              $output.='<div class="progress">';
+                $output.='<div class="progress-bar " role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%; background-color:#5bbbff;">';
+
+                $output.='</div>';
+              $output.='</div>';
+
+               $output.='<div class="font-size-14 font-family-open-sans">Initiating Insulin<span class="float-right">75%</span></div>';
+               $output.='<div class="progress">';
+                $output.='<div class="progress-bar " role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%; background-color: #cae9ff ;">';
+
+                $output.='</div>';
+              $output.='</div>';
+
+              $output.='<div class="font-size-14 font-family-open-sans">Better Patient management<span class="float-right">50%</span></div>';
+              $output.='<div class="progress">';
+                $output.='<div class="progress-bar " role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%; background-color:#005fa3;">';
+
+                $output.='</div>';
+              $output.='</div>';
+
+              $output.='<div class="font-size-14 font-family-open-sans">Learn about new therapies<span class="float-right">60%</span></div>';
+              $output.='<div class="progress">';
+                $output.='<div class="progress-bar " role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%; background-color: #75a2da ;">';
+
+                $output.='</div>';
+              $output.='</div>';
+
+              $output.='<div class="font-size-14 font-family-open-sans">Titrate Doses<span class="float-right">35%</span></div>';
+              $output.='<div class="progress">';
+                $output.='<div class="progress-bar " role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%; background-color:#003459;">';
+
+                $output.='</div>';
+              $output.='</div>';
+
+
                 $output.='</div>';
             $output.='</div>';
             /**
@@ -253,7 +289,7 @@ $output.='<div class="page-content-wrap ">';
      * END GOOGLE WORLD MAP
      */
 
-      $output.='<div class="row">';
+      $output.='<div class="row margin-top-24">';
           $output.='<div class="col-md-6">';
             $output.='<div class="panel panel-default ">';
               /**

@@ -29,47 +29,86 @@ function googlecharts() {
     /*
      * Google Column chart
      */
-    google.load("visualization", "1", {packages:["corechart"]});
-    google.setOnLoadCallback(googleColumnBarChart);
-    function googleColumnBarChart() {
+     function drawVisualization() {
+    // just a normal ComboChart setup
+    var data = google.visualization.arrayToDataTable([
+        ['Month', '' ],
+        ['Self Learning', 0.25],
+        ['Online Courses', 0.18],
+        ['Symposia', 0.16],
+        ['Interactive Cases', 0.15],
+        ['Mixed topic education', 0.13],
+        ['Webinars', 0.11],
+        ['Others', 0.02],
+
+    ]);
+    var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
+    formatter.format(data, 1);
 
 
-      var data = google.visualization.arrayToDataTable([
-        ["Element", "", { role: "style" } ],
-        ["Self Learning", 25, "#5bbbff"],
-        ["Online Courses", 18, "#5bbbff"],
-        ["Symposia", 16, "#5bbbff"],
-        ["Interactive Cases", 15, "#5bbbff"],
-        ["Mixed topic education", 13, "color: #5bbbff"],
-        ["Webinars", 11, "color: #5bbbff"],
-        ["Others", 2, "color: #5bbbff"]
-      ]);
-
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
-
-      var options = {
-
-
-        height: 300,
+    mydiv = $("#google-column-bar-chart");
+    chart = new google.visualization.ComboChart(mydiv[0]);
+    chart.draw(data, {
+         height: 300, seriesType: 'bars',
+        legend: {position: 'none'},
         bar: {groupWidth: "55%"},
-        legend: { position: "none" },
-        vAxis: {format: '#\'%\''}
-        //isStacked: true,
-        // vAxis:   {
+        vAxis: {format: "#.#%"},
+        vAxis:{gridlines: {count: 0}},
+        chartArea: {left: 60, top: 30, width: 540},
+        focusTarget: 'category',
+        colors:['#5bbbff']
 
-        //   maxValue: 100
-        // } ,
+    });
 
-      };
-      var chart = new google.visualization.ColumnChart(document.getElementById("google-column-bar-chart"));
-      chart.draw(view, options);
+    /* Here comes the hack!
+    We're going to add a svg text element to each column bar.
+    This code will work for this data setup only. If you add/remove a series, this code must be adapted
+    */
+    rects = mydiv.find('svg > g > g > g > rect');
+    var row = 0;
+    for (i = 0; i < rects.length; i++) {
+        // this selector also retrieves gridlines
+        // we're excluding them by height
+        el = $(rects[i]);
+        if (parseFloat(el.attr("height")) <= 2) { continue; }
+        aparent = el.parent();
+        do { // skips 'null' values
+            text = data.getValue(row++, 1);
+        } while (text == null && row < data.getNumberOfRows());
+
+        if (text) {
+            text = formatter.formatValue(text);
+            // see below
+            pos = getElementPos(el);
+            attrs = {x: pos.x + pos.width / 2, y: pos.y - 10,
+                     fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
+            aparent.append(addTextNode(attrs, text, aparent));
+        }
     }
+}
+
+google.load('visualization', '1', {packages: ['corechart']});
+google.setOnLoadCallback(drawVisualization);
+
+function getElementPos($el) {
+    // returns an object with the element position
+    return {
+        x: parseFloat($el.attr("x")),
+        width: parseFloat($el.attr("width")),
+        y: parseFloat($el.attr("y")),
+        height: parseFloat($el.attr("height"))
+    }
+}
+
+function addTextNode(attrs, text, _element) {
+    // creates an svg text node
+  var el = document.createElementNS('http://www.w3.org/2000/svg', "text");
+  for (var k in attrs) { el.setAttribute(k, attrs[k]); }
+  var textNode = document.createTextNode(text);
+  el.appendChild(textNode);
+  return el;
+}
+    /* Google Column chart end */
 
 //var googleStackedChart = function() {
   google.load("visualization", "1", {packages:["corechart"]});
