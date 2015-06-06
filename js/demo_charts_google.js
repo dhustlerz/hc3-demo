@@ -19,7 +19,9 @@ function googlecharts() {
 
         var options = {
           height: 300,
-           colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          chartArea:{left:"20%",top:"10%",width:"90%",height:"90%"},
+          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          legend: {  alignment: 'center',textStyle: {fontSize: 12} }
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('google-pie-chart'));
