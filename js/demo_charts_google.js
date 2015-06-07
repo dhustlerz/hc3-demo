@@ -36,7 +36,7 @@ function googlecharts() {
               vAxis:{gridlines: {count: 0}},
               chartArea: {left: 200, top: 10,height:300},
               focusTarget: 'category',
-              colors:['#5bbbff']
+              colors:['#00528c']
 
           });
 
