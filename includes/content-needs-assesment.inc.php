@@ -110,7 +110,7 @@ $output.='<div class="page-content-wrap ">';
            * START REGULAR PIE CHART
            */
           $output.='<div class="panel ">';
-          $output.='<div class=" panel-header">Participation Breakdown</div>';
+          $output.='<div class=" panel-header">Participation Breakdown<span class="float-right padding-right-24">N=275</span></div>';
               $output.='<div class="col-md-2 "></div>';
               $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
                   $output.='<div class="" id="google-bar-province-chart" style="height: 300px;"></div>';
