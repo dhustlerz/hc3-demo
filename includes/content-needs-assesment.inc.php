@@ -1,4 +1,5 @@
 <?php
+require 'sample-tables.inc.php' ;
 $output = '';
 
       /**
@@ -109,10 +110,10 @@ $output.='<div class="page-content-wrap ">';
            * START REGULAR PIE CHART
            */
           $output.='<div class="panel ">';
-          $output.='<div class=" panel-header">Business Unit Performance </div>';
+          $output.='<div class=" panel-header">Participation Breakdown</div>';
               $output.='<div class="col-md-2 "></div>';
-              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 300px;">';
-                  $output.='<div class="" id="chart-5" style="height: 300px;"><svg></svg></div>';
+              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
+                  $output.='<div class="" id="google-bar-province-chart" style="height: 300px;"></div>';
               $output.='</div>';
               $output.='<div class="col-md-2 "></div>';
           $output.='</div>';
@@ -290,35 +291,33 @@ $output.='<div class="page-content-wrap ">';
      */
 
       $output.='<div class="row margin-top-24">';
-          $output.='<div class="col-md-6">';
+
+        $output.='<div class="col-md-12">';
             $output.='<div class="panel panel-default ">';
               /**
                * START DEFAULT DATATABLE
                */
-              require 'simple-speaker-table.inc.php' ;
+              $output.= educational_gaps();
               /**
                * END DEFAULT DATATABLE
                */
             $output.='</div>';
         $output.='</div>';
-          $output.='<div class="col-md-6">';
-            /**
-             * START DatatTables
-             */
-            $output.='<div class="panel panel-default ">';
-              /**
-               * START DEFAULT DATATABLE
-               */
-               require 'simple-program-table.inc.php' ;
-              /**
-               * END DEFAULT DATATABLE
-               */
-            $output.='</div>';
-            /**
-             * END DatatTables
-             */
-        $output.='</div>';
-    $output.='</div>';
+
+        // $output.='<div class="col-md-6">';
+        //     $output.='<div class="panel panel-default ">';
+        //       /**
+        //        * START DEFAULT DATATABLE
+        //        */
+        //       $output.= speaker_table();
+        //       /**
+        //        * END DEFAULT DATATABLE
+        //        */
+        //     $output.='</div>';
+        // $output.='</div>';
+
+      $output.='</div>';
+
 $output.='</div>';
 /**
  * END PAGE CONTENT WRAPPER

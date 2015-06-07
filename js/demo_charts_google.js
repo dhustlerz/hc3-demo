@@ -1,6 +1,98 @@
 googlecharts();
 function googlecharts() {
 
+
+    /*
+     * Google Bar Province Chart Start
+     */
+      function googleBarProvinceChart() {
+          // just a normal ComboChart setup
+          var data = google.visualization.arrayToDataTable([
+              ['Province', '' ],
+              ['Alberta', 0.12 ],
+              ['B.C', 0.10],
+              ['Manitoba', 0.04],
+              ['New Brunswik', 0.03],
+              ['Newfordland', 0.1],
+              ['Nova Scotia ', 0.07],
+              ['Ontario', 0.30 ],
+              ['P.E.I', 0.01],
+              ['Quebec', 0.25 ],
+              ['Saskatchewan', 0.07],
+
+
+          ]);
+          var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
+          formatter.format(data, 1);
+
+
+          mydiv = $("#google-bar-province-chart");
+          chart = new google.visualization.BarChart(mydiv[0]);
+          chart.draw(data, {
+
+              legend: {position: 'none'},
+              vAxis: {format: "#.#%"},
+              bar: {groupWidth: "85%"},
+              vAxis:{gridlines: {count: 0}},
+              chartArea: {left: 200, top: 10,height:300},
+              focusTarget: 'category',
+              colors:['#5bbbff']
+
+          });
+
+          /* Here comes the hack!
+          We're going to add a svg text element to each column bar.
+          This code will work for this data setup only. If you add/remove a series, this code must be adapted
+          */
+          rects = mydiv.find('svg > g > g > g > rect');
+          var row = 0;
+          for (i = 0; i < rects.length; i++) {
+              // this selector also retrieves gridlines
+              // we're excluding them by height
+              el = $(rects[i]);
+              if (parseFloat(el.attr("width")) <= 2) { continue; }
+              aparent = el.parent();
+              do { // skips 'null' values
+                  text = data.getValue(row++, 1);
+              } while (text == null && row < data.getNumberOfRows());
+
+              if (text) {
+                  text = formatter.formatValue(text);
+                  // see below
+                  pos = getElementPos(el);
+                  attrs = {x: pos.x + pos.width / 1+18, y: pos.y + 14,
+                           fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
+                  aparent.append(addTextNode(attrs, text, aparent));
+              }
+          }
+      }
+
+      google.load('visualization', '1', {packages: ['corechart']});
+      google.setOnLoadCallback(googleBarProvinceChart);
+
+      function getElementPos($el) {
+          // returns an object with the element position
+          return {
+              x: parseFloat($el.attr("x")),
+              width: parseFloat($el.attr("width")),
+              y: parseFloat($el.attr("y")),
+              height: parseFloat($el.attr("height"))
+          }
+      }
+
+      function addTextNode(attrs, text, _element) {
+          // creates an svg text node
+        var el = document.createElementNS('http://www.w3.org/2000/svg', "text");
+        for (var k in attrs) { el.setAttribute(k, attrs[k]); }
+        var textNode = document.createTextNode(text);
+        el.appendChild(textNode);
+        return el;
+      }
+      /*
+     * Google Bar Province Chart End
+     */
+
+
     /*
      * Google Pie Chart
      */
@@ -56,7 +148,7 @@ function googlecharts() {
         bar: {groupWidth: "55%"},
         vAxis: {format: "#.#%"},
         vAxis:{gridlines: {count: 0}},
-        chartArea: {left: 60, top: 30, width: 540},
+        chartArea: {left: 60, top: 30, width: 650},
         focusTarget: 'category',
         colors:['#5bbbff']
 

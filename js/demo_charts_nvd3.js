@@ -280,7 +280,7 @@ var nvd3Charts = function() {
 				//Allow user to switch between "Grouped" and "Stacked" mode.
 
 
-				chart2.yAxis.tickFormat(d3.format(',r'));
+				chart2.yAxis.tickFormat(d3.format(',f'));
 				/*
 			   * Chart two ends
 				 */
@@ -304,11 +304,11 @@ var nvd3Charts = function() {
 				.transitionDuration(350)
         .showControls(false)
         .color(['#aec7e8', '#7b94b5'])
-        .stacked(true);
+        .stacked(false);
 				//Allow user to switch between "Grouped" and "Stacked" mode.
 
 
-				chart3.yAxis.tickFormat(d3.format(',f'));
+				chart3.yAxis.tickFormat(d3.format(','));
 				/*
 			   * Chart three ends
 				 */
@@ -331,11 +331,11 @@ var nvd3Charts = function() {
 				.transitionDuration(350)
         .showControls(false)
         .color(['#aec7e8', '#7b94b5'])
-        .stacked(true);
+        .stacked(false);
 				//Allow user to switch between "Grouped" and "Stacked" mode.
 
 
-				chart3.yAxis.tickFormat(d3.format(',f'));
+				chart3.yAxis.tickFormat(d3.format(','));
 				/*
 			   * Chart Four ends
 				 */

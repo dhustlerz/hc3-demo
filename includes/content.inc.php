@@ -1,4 +1,5 @@
 <?php
+require 'sample-tables.inc.php' ;
 
 $output = '';
 
@@ -287,36 +288,33 @@ $output.='<div class="page-content-wrap ">';
      * END GOOGLE WORLD MAP
      */
 
-      $output.='<div class="row">';
-          $output.='<div class="col-md-6">';
+      $output.='<div class="row margin-top-24">';
+
+        $output.='<div class="col-md-6">';
             $output.='<div class="panel panel-default ">';
               /**
                * START DEFAULT DATATABLE
                */
-              require 'simple-speaker-table.inc.php' ;
+              $output.= program_table();
               /**
                * END DEFAULT DATATABLE
                */
             $output.='</div>';
         $output.='</div>';
-          $output.='<div class="col-md-6">';
-            /**
-             * START DatatTables
-             */
+
+        $output.='<div class="col-md-6">';
             $output.='<div class="panel panel-default ">';
               /**
                * START DEFAULT DATATABLE
                */
-               require 'simple-program-table.inc.php' ;
+              $output.= speaker_table();
               /**
                * END DEFAULT DATATABLE
                */
             $output.='</div>';
-            /**
-             * END DatatTables
-             */
         $output.='</div>';
-    $output.='</div>';
+
+      $output.='</div>';
 $output.='</div>';
 /**
  * END PAGE CONTENT WRAPPER
