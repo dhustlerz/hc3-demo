@@ -9,16 +9,16 @@ function googlecharts() {
           // just a normal ComboChart setup
           var data = google.visualization.arrayToDataTable([
               ['Province', '' ],
-              ['Alberta', 0.12 ],
+              ['AB', 0.12 ],
               ['B.C', 0.10],
-              ['Manitoba', 0.04],
-              ['New Brunswik', 0.03],
-              ['Newfordland', 0.1],
-              ['Nova Scotia ', 0.07],
-              ['Ontario', 0.30 ],
+              ['MB', 0.04],
+              ['NB', 0.03],
+              ['NFLD', 0.1],
+              ['NS ', 0.07],
+              ['ON', 0.30 ],
               ['P.E.I', 0.01],
-              ['Quebec', 0.25 ],
-              ['Saskatchewan', 0.07],
+              ['QC', 0.25 ],
+              ['SASK', 0.07],
 
 
           ]);

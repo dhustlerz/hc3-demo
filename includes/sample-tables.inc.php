@@ -47,7 +47,7 @@ function educational_gaps(){
   $output='';
     $output.='<div class="panel-body padding-0">';
       $output.='<table class="table ">';
-         $output.='<thead><tr><th>Topic</th><th>Responses</th><th>Average Rating</th> </tr></thead>';
+         $output.='<thead><tr><th>New Learning Opportunities</th><th>Responses</th><th>Average Rating</th> </tr></thead>';
           $output.='<tbody>';
             $output.='<tr><td>Optimal and safe drug combinations</td><td>225</td><td>4.75</td> </tr>';
             $output.='<tr><td>Combination of glucose lowering agent and insulin </td><td>215</td><td>4.72</td> </tr>';

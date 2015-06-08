@@ -227,6 +227,7 @@ var nvd3Charts = function() {
 		}
 
 	};
+
 	var startChart5 = function() {
 		d3.json('assets/plugins/nvd3/multiBarHorizontalData.json', function(data) {
 			nv.addGraph(function() {
@@ -280,11 +281,11 @@ var nvd3Charts = function() {
 				//Allow user to switch between "Grouped" and "Stacked" mode.
 
 
-				chart2.yAxis.tickFormat(d3.format(',f'));
+				chart2.yAxis.tickFormat(d3.format(','));
 				/*
 			   * Chart two ends
 				 */
-
+				  /*----------------------------------------------------------------------------------*/
 			 /*
 		    * Chart three start
 			  */
@@ -310,11 +311,12 @@ var nvd3Charts = function() {
 
 				chart3.yAxis.tickFormat(d3.format(','));
 				/*
-			   * Chart three ends
+				 * Chart three ends
 				 */
-			 /*
-		    * Chart Four start
-			  */
+				/*----------------------------------------------------------------------------------*/
+				/*
+				 * Chart Four start
+				 */
 				var chart4 = nv.models.multiBarHorizontalChart()
 
 				.x(function(d) {return d.x;})
@@ -331,29 +333,27 @@ var nvd3Charts = function() {
 				.transitionDuration(350)
         .showControls(false)
         .color(['#aec7e8', '#7b94b5'])
+
+        //Allow user to switch between "Grouped" and "Stacked" mode.
         .stacked(false);
-				//Allow user to switch between "Grouped" and "Stacked" mode.
-
-
-				chart3.yAxis.tickFormat(d3.format(','));
+				chart4.yAxis.tickFormat(d3.format(','));
 				/*
 			   * Chart Four ends
 				 */
+
 				d3.select('#chart-5 svg').datum(data[0].data1).call(chart1);
 
+				//Define the Potential impact of new approaches to patient care, as proposed by the latest clinical trials
+
 				d3.select('#chart-5pt2 svg').datum(data[2].data3).call(chart4);
+
+				//
+
 				d3.select('#chart-5pt4 svg').datum(data[1].data2).call(chart2);
 
+				// Summarize the key trials / trial outcome that were presented ASH 2014 from the Canadian Oncology Pharmacist perspective
+
 				d3.select('#chart-5pt3 svg').datum(data[2].data3).call(chart3);
-				// .each("end", function() {
-	   //      d3.select("g.nv-legendWrap").selectAll("g.nv-series")
-	   //          .filter(function(d) { return d.visible == false; })
-	   //          .each(function(d) {
-	   //              this.dispatchEvent(new Event("click"));
-	   //          });
-	   //      });
-
-
 
 
 				//return chart;
@@ -364,6 +364,82 @@ var nvd3Charts = function() {
    //  });
 	};
 
+	// var startChartTest = function() {
+
+	// 	var chart = nv.models.multiBarHorizontalChart();
+	// 	d3.select('#chart-test svg').datum([
+	// 	  {
+	// 	    key: "S1",
+	// 	    visible: true,
+	// 	    color: "#5bbbff",
+	// 	    values:
+	// 	       [
+ //          {
+ //            "x" : "I am Not interested" ,
+ //            "y" : 60
+ //          } ,
+ //          {
+ //            "x" : "I see the need but..." ,
+ //            "y" : 80
+ //          } ,
+ //          {
+ //            "x" : "I would like to learn more" ,
+ //            "y" : 90
+ //          } ,
+ //          {
+ //            "x" : "I am ready to do this" ,
+ //            "y" : 70
+ //          } ,
+ //          {
+ //            "x" : "I do this consistently" ,
+ //            "y" : 50
+ //          }
+
+ //        ]
+	// 	  },
+	// 	  {
+	// 	    key: "S2",
+	// 	    color: "#003459",
+	// 	    visible: false,
+	// 	    values:
+	// 	     [
+ //          {
+ //            "x" : "I am Not interested" ,
+ //            "y" : 100
+ //          } ,
+ //          {
+ //            "x" : "I see the need but..." ,
+ //            "y" : 90
+ //          } ,
+ //          {
+ //            "x" : "I would like to learn more" ,
+ //            "y" : 95
+ //          } ,
+ //          {
+ //            "x" : "I am ready to do this" ,
+ //            "y" : 85
+ //          } ,
+ //          {
+ //            "x" : "I do this consistently" ,
+ //            "y" : 70
+ //          }
+
+ //        ]
+	// 	  }
+	// 	]).transition().duration(500)
+
+	// 	    .call(chart)
+
+	// 	    .each("end", function() {
+	// 	        d3.select("g.nv-legendWrap").selectAll("g.nv-series")
+	// 	            .filter(function(data) { return data.visible == false; })
+	// 	            .each(function(data) {
+	// 	                this.dispatchEvent(new Event("click"));
+	// 	            });
+	// 	    });
+
+
+	//}
 	var startChart6 = function() {
 		d3.json("assets/plugins/nvd3/linePlusBarData.json", function(error, data) {
 			nv.addGraph(function() {
@@ -655,6 +731,7 @@ var nvd3Charts = function() {
 			startChart7();
 			startChart8();
 			startChart9();
+
 		}
 	};
 

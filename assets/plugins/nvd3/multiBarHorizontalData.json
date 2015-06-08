@@ -165,15 +165,15 @@
         "values": [
           {
             "x" : "I am Not interested" ,
-            "y" : 60
-          } ,
-          {
-            "x" : "I see the need but..." ,
             "y" : 80
           } ,
           {
+            "x" : "I see the need but..." ,
+            "y" : 85
+          } ,
+          {
             "x" : "I would like to learn more" ,
-            "y" : 90
+            "y" : 87
           } ,
           {
             "x" : "I am ready to do this" ,
@@ -188,8 +188,9 @@
       },
       {
         "key": "Post meetings",
-        "visible": true,
+
         "color": "#003459",
+        "visible": true,
         "values": [
           {
             "x" : "I am Not interested" ,
