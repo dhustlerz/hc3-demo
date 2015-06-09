@@ -1,5 +1,5 @@
 jQuery(function(){
-    /* reportrange */
+    /* dropdownCustom */
     if(jQuery(".reportrange").length > 0){
         jQuery(".reportrange").daterangepicker({
             ranges: {
@@ -25,6 +25,9 @@ jQuery(function(){
         jQuery(".reportrange span").html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
     }
     /* end reportrange */
+
+
+
 
     /* Rickshaw dashboard chart */
     var seriesData = [ [], [] ];

@@ -18,13 +18,31 @@ $output = '';
     /**
      * START BREADCRUMB
      */
-    $output.='<ul class="breadcrumb height-52">';
+    $output.='<ul class="breadcrumb ">';
       $output.='<li><a href="#">Home</a></li>';
       $output.='<li class="active">Dashboard</li>';
-        $output.='<li>';
-        $output.='<ul class="dropdown-menu bg-1865a9" role="menu" aria-labelledby="dropdownMenuDivider">';
-         //$output.='<li role="presentation" class="divider"></li>';
-        $output.='</ul>';
+        $output.='<div class="float-right " >';
+          $output.='<li>';
+
+            $output.='<div class="dropdown">';
+              $output.='<button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="false">';
+
+                $output.='Diabetes     ';
+                $output.='<span style="margin-left: 4px;" class="caret"></span>';
+                $output.='<span class="sr-only">Toggle Dropdown</span>';
+
+              $output.='</button>';
+
+              $output.='<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">';
+
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cardiovascular</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Diabetes</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Oncology</a></li>';
+
+              $output.='</ul>';
+
+            $output.='</div>';
+          $output.='</div>';
       $output.='</li>';
     $output.='</ul>';
 /**
@@ -35,7 +53,6 @@ $output.='<div class="page-content-wrap ">';
     /**
      * START  Widgets 1
      */
-
 
      $Ques_sent = array (
       'value' => 1475 ,
@@ -57,9 +74,10 @@ $output.='<div class="page-content-wrap ">';
      * END  Widgets 1
      */
 
-        /**
+    /**
      * START .Widgets 2
      */
+
       //Not required here in this template
 
     /**
