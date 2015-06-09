@@ -65,15 +65,34 @@ $sidebar_output.='<a href="#"><span class="fa  fa-file-text-o"></span><span clas
                                   //     $sidebar_output.='<li class="menu"><a href="#">Non Accredited</a></li>';
                                   // $sidebar_output.='</ul>';
                               $sidebar_output.='</li>';
-                              $sidebar_output.='<li>';
-                                  $sidebar_output.='<a href="#">Cardiovascular</a>';
+
+                              $sidebar_output.='<li class="xn-openable">';
+                              $sidebar_output.='<a href="#">Diabetes</a>';
+                                $sidebar_output.='<ul>';
+                                  $sidebar_output.='<li class="menu"><a href="program-evaluation.php?p=diabetes&t=all">All Programs</a></li>';
+                                  $sidebar_output.='<li class="menu"><a href="program-evaluation.php?p=diabetes&t=accr">Accredited</a></li>';
+                                  $sidebar_output.='<li class="menu"><a href="program-evaluation.php?p=diabetes&t=non-accr">Non Accredited</a></li>';
+                                $sidebar_output.='</ul>';
                               $sidebar_output.='</li>';
-                              $sidebar_output.='<li >';
-                                  $sidebar_output.='<a href="#">Diabetes</a>';
+
+                              $sidebar_output.='<li class="xn-openable">';
+                              $sidebar_output.='<a href="#">Cardiovascular</a>';
+                                $sidebar_output.='<ul>';
+                                  $sidebar_output.='<li class="menu"><a href="#">All Programs</a></li>';
+                                  $sidebar_output.='<li class="menu"><a href="#">Accredited</a></li>';
+                                  $sidebar_output.='<li class="menu"><a href="#">Non Accredited</a></li>';
+                                $sidebar_output.='</ul>';
                               $sidebar_output.='</li>';
-                              $sidebar_output.='<li >';
-                                  $sidebar_output.='<a href="#">Oncology</a>';
+
+                              $sidebar_output.='<li class="xn-openable">';
+                              $sidebar_output.='<a href="#">Oncology</a>';
+                                $sidebar_output.='<ul>';
+                                  $sidebar_output.='<li class="menu"><a href="#">All Programs</a></li>';
+                                  $sidebar_output.='<li class="menu"><a href="#">Accredited</a></li>';
+                                  $sidebar_output.='<li class="menu"><a href="#">Non Accredited</a></li>';
+                                $sidebar_output.='</ul>';
                               $sidebar_output.='</li>';
+
                           $sidebar_output.='</ul>';
           $sidebar_output.='</li>';
       $sidebar_output.='</li>';

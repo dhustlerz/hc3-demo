@@ -105,15 +105,15 @@ function widget1( $ques_sent, $responses, $response_rate) {
 }
 
 
-function widget2(){
-
+function widget2( $avgSpeakerRating, $avgProgramRating, $CustomerSatisfaction ) {
+  $output='';
   $output.='<div class="row">';
 
       $output.='<div class="col-md-4 ">';
         $output.='<div class="row  bg-2DAAE1 margin-top-12">';
 
           $output.='<div class=" col-md-12 padding-top-12">';
-            $output.='<div class="col-md-1 col-xs-1 "><span class="font-size-18 color-fff col-centered">4.52</span></div>';
+            $output.='<div class="col-md-1 col-xs-1 "><span class="font-size-18 color-fff col-centered">'.$avgSpeakerRating['value'].'</span></div>';
 
               $output.='<div class=" col-md-11 col-xs-11">';
                 $output.='<div class="dashpage-square-number-left height-26 ">';
@@ -127,7 +127,7 @@ function widget2(){
           $output.='</div>';
 
           $output.='<div class="col-md-12">';
-            $output.='<div class="padding-left-10 font-size-16 color-fff margin-bottom-8">Average Speaker Rating</div>';
+            $output.='<div class="padding-left-10 font-size-16 color-fff margin-bottom-8">'.$avgSpeakerRating['label'].'</div>';
           $output.='</div>';
 
         $output.='</div>';
@@ -137,7 +137,7 @@ function widget2(){
         $output.='<div class="row  bg-3C5B9B margin-top-12">';
 
           $output.='<div class=" col-md-12 padding-top-12">';
-            $output.='<div class="col-md-1 col-xs-1 "><span class="font-size-18 color-fff col-centered">4.25</span></div>';
+            $output.='<div class="col-md-1 col-xs-1 "><span class="font-size-18 color-fff col-centered">'.$avgProgramRating['value'].'</span></div>';
 
               $output.='<div class=" col-md-11 col-xs-11">';
                 $output.='<div class="dashpage-square-number-left height-26 ">';
@@ -151,7 +151,7 @@ function widget2(){
           $output.='</div>';
 
           $output.='<div class="col-md-12">';
-            $output.='<div class="padding-left-10 font-size-16 color-fff margin-bottom-8">Average Program Rating</div>';
+            $output.='<div class="padding-left-10 font-size-16 color-fff margin-bottom-8">'.$avgProgramRating['label'].'</div>';
           $output.='</div>';
 
         $output.='</div>';
@@ -161,7 +161,7 @@ function widget2(){
         $output.='<div class="row  bg-0173B2 margin-top-12">';
 
           $output.='<div class=" col-md-12 padding-top-12">';
-            $output.='<div class="col-md-1 col-xs-1 "><span class="font-size-18 color-fff col-centered">88.3%</span></div>';
+            $output.='<div class="col-md-1 col-xs-1 "><span class="font-size-18 color-fff col-centered">'.$CustomerSatisfaction['value'].'%</span></div>';
 
               $output.='<div class=" col-md-11 col-xs-11">';
                 $output.='<div class="dashpage-square-number-left height-26 ">';
@@ -175,7 +175,7 @@ function widget2(){
           $output.='</div>';
 
           $output.='<div class="col-md-12">';
-            $output.='<div class="padding-left-10 font-size-16 color-fff margin-bottom-8">Customer Satisfaction</div>';
+            $output.='<div class="padding-left-10 font-size-16 color-fff margin-bottom-8">'.$CustomerSatisfaction['label'].'</div>';
           $output.='</div>';
 
         $output.='</div>';
@@ -183,6 +183,7 @@ function widget2(){
       /*-------------------------------------------------------------------------------------*/
 
     $output.='</div>';
+    return $output;
 }
 
 

@@ -16,6 +16,18 @@
              elseif ($request_URI == '/hc3-demo/needs-assessment.php') {
                  include 'content-needs-assesment.inc.php';
              }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=diabetes&t=all')
+             {
+                include 'content-diabetes.inc.php';
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=diabetes&t=accr')
+             {
+                include 'content-diabetes-accr.inc.php';
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=diabetes&t=non-accr')
+             {
+                include 'content-diabetes-non-accr.inc.php';
+             }
 
              echo '</div>';
              // END PAGE CONTENT -->
