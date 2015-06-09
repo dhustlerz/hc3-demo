@@ -110,7 +110,7 @@ function widget2( $avgSpeakerRating, $avgProgramRating, $CustomerSatisfaction ) 
   $output.='<div class="row">';
 
       $output.='<div class="col-md-4 ">';
-        $output.='<div class="row  bg-2DAAE1 margin-top-12">';
+        $output.='<div class="row  bg-0D79CF margin-top-12">';
 
           $output.='<div class=" col-md-12 padding-top-12">';
             $output.='<div class="col-md-1 col-xs-1 "><span class="font-size-18 color-fff col-centered">'.$avgSpeakerRating['value'].'</span></div>';
@@ -134,7 +134,7 @@ function widget2( $avgSpeakerRating, $avgProgramRating, $CustomerSatisfaction ) 
       $output.='</div>';
       /*-------------------------------------------------------------------------------------*/
        $output.='<div class="col-md-4 ">';
-        $output.='<div class="row  bg-3C5B9B margin-top-12">';
+        $output.='<div class="row  bg-1194C8 margin-top-12">';
 
           $output.='<div class=" col-md-12 padding-top-12">';
             $output.='<div class="col-md-1 col-xs-1 "><span class="font-size-18 color-fff col-centered">'.$avgProgramRating['value'].'</span></div>';
