@@ -204,7 +204,7 @@ $output.='<div class="page-content-wrap ">';
              * START REGULAR PIE CHART
              */
             $output.='<div class="panel ">';
-            $output.='<div class=" panel-header">Desired Educaion Topics</div>';
+            $output.='<div class=" panel-header">Desired Education Topics</div>';
               $output.='<div class="panel-body bg-ffffff" style="height: 370px;">';
               $output.='<div class="text-center font-size-14 font-family-open-sans margin-bottom-15">I Would Like Diabetes Education To Increase My Ability To: </div>';
                     //$output.='<div id="google-stacked-chart" style=" height: 300px;"></div>';
