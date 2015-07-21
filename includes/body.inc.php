@@ -10,7 +10,7 @@
 
              // PAGE CONTENT -->
              echo'<div class="page-content">';
-             if ($request_URI == '/Personal@11001799/overview.php') {
+             if ($request_URI == '/Personal@11001799/hc3-demo/overview.php') {
                 include 'content.inc.php';
              }
              elseif ($request_URI == '/Personal@11001799/hc3-demo/needs-assessment.php') {
