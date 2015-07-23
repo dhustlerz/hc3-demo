@@ -1073,6 +1073,7 @@
 
         <script type="text/javascript" src="js/plugins.js"></script>
         <script type="text/javascript" src="js/actions.js"></script>
+        <script type="text/javascript" src="js/ganalytics.js"></script>
         <!-- END TEMPLATE -->
     <!-- END SCRIPTS -->
 
