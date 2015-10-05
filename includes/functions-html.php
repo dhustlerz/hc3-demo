@@ -85,7 +85,7 @@ function widget1( $ques_sent, $responses, $response_rate) {
                       $output.='<div class="col-md-6">';
                       /*--------------------------------------------------------------------------------------*/
                         $output.='<div class="dashpage-square-number-top padding-top-10 padding-bottom-10">';
-                          $output.='<div class="animate-number-2 h3 line-height-1-5">'.$response_rate['value'].'%</div>';
+                          $output.='<div class="animate-number-2 h3 line-height-1-5">'.$response_rate['value'].'</div>';
                           $output.='<div class="h6 padding-top-6">'.$response_rate['label'].'</div>';
                         $output.='</div>';
                       /*--------------------------------------------------------------------------------------*/
