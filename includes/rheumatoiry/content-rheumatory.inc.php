@@ -89,34 +89,81 @@ $output.='<div class="page-content-wrap ">';
 
     // Break Down 4
 
+    // $output.='<div class="row margin-top-24" >';
+
+    //     $output.='<div id="refresh" class=" col-md-12 " style="">';
+    //       /**
+    //        * START REGULAR PIE CHART
+    //        */
+    //       $output.='<div class="panel ">';
+    //       $output.='<div class=" panel-header">Speaker<span class="float-right padding-right-24"></span></div>';
+    //         $output .= '<div class="col-md-6">';
+
+    //           $output.='<div class="col-md-2 "></div>';
+    //           $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
+    //           $output .= '<div class="text-center">Encouraged and enabled group interaction</div>';
+    //               $output.='<div class="" id="speaker-google-donut-q9" style="height: 300px;"></div>';
+    //           $output.='</div>';
+    //           $output.='<div class="col-md-2 "></div>';
+    //         $output.='</div>';
+    //         $output .= '<div class="col-md-6">';
+    //           $output.='<div class="col-md-2 "></div>';
+    //           $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
+    //           $output .= '<div class="text-center">Overall, the facilitator was effective in addressing my practice concerns</div>';
+    //               $output.='<div class="" id="speaker-google-donut-q10" style="height: 300px;"></div>';
+    //           $output.='</div>';
+    //           $output.='<div class="col-md-2 "></div>';
+    //         $output.='</div>';
+
+
+    //           // colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+    //         $output .= '<div class="row text-center">';
+    //           $output .= '<div class="col-centered" style="margin-bottom:12px;">';
+
+    //           $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+    //           $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#5bbbff"></span>';
+    //           $output.='<span class="margin-left-8 small">1: Strongly Disagree</span></div>';
+
+    //           $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+    //           $output.='<span class="glyphicon glyphicon-stop" aria-hidden="true" style="color:#cae9ff"></span>';
+    //           $output.='<span class="margin-left-8 small">2: Neutral</span></div>';
+
+    //           $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+    //           $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#005fa3"></span>';
+    //           $output.='<span class="margin-left-8 small">3: Somewhat Agree</span></div>';
+
+    //           $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+    //           $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#D9D9D9"></span>';
+    //           $output.='<span class="margin-left-8 small">4: Agree</span></div>';
+
+    //           $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+    //           $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#003459"></span>';
+    //           $output.='<span class="margin-left-8 small">5: Strongly Agree</span></div>';
+    //           $output .= '</div>';
+    //           $output .= '</div>';
+    //       $output.='</div>';
+    //       /**
+    //        * END REGULAR PIE CHART
+    //        */
+
+
+    //     $output.='</div>';
+
+    // $output.='</div>';
     $output.='<div class="row margin-top-24" >';
 
-        $output.='<div id="refresh" class=" col-md-12 " style="">';
+        $output.='<div id="refresh" class=" col-md-6 " style="">';
           /**
-           * START REGULAR PIE CHART
+           * START CHART Ques 9
            */
-          $output.='<div class="panel ">';
-          $output.='<div class=" panel-header">Speaker<span class="float-right padding-right-24"></span></div>';
-            $output .= '<div class="col-md-6">';
-
+          $output.='<div class="panel">';
+          $output.='<div class=" panel-header">Educational Objective<span class="float-right padding-right-24"></span></div>';
               $output.='<div class="col-md-2 "></div>';
-              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
-              $output .= '<div class="text-center">Encouraged and enabled group interaction</div>';
+              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 430px;">';
+              $output .= '<div class="text-center">Explain the evidence-based benefits and risks associated with DMARD and..</div>';
                   $output.='<div class="" id="speaker-google-donut-q9" style="height: 300px;"></div>';
               $output.='</div>';
-              $output.='<div class="col-md-2 "></div>';
-            $output.='</div>';
-            $output .= '<div class="col-md-6">';
-              $output.='<div class="col-md-2 "></div>';
-              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
-              $output .= '<div class="text-center">Overall, the facilitator was effective in addressing my practice concerns</div>';
-                  $output.='<div class="" id="speaker-google-donut-q10" style="height: 300px;"></div>';
-              $output.='</div>';
-              $output.='<div class="col-md-2 "></div>';
-            $output.='</div>';
-
-
-              // colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+                  //           // colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
             $output .= '<div class="row text-center">';
               $output .= '<div class="col-centered" style="margin-bottom:12px;">';
 
@@ -140,14 +187,75 @@ $output.='<div class="page-content-wrap ">';
               $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#003459"></span>';
               $output.='<span class="margin-left-8 small">5: Strongly Agree</span></div>';
               $output .= '</div>';
-              $output .= '</div>';
+
+           $output.='</div>';
+              $output.='<div class="col-md-2 "></div>';
           $output.='</div>';
           /**
-           * END REGULAR PIE CHART
+           * END CHART
            */
-
-
         $output.='</div>';
+
+        $output.='<div id="refresh" class="col-md-6" style="">';
+          /**
+           * START CHART Ques 10
+           */
+          $output.='<div class="panel">';
+          $output.='<div class=" panel-header">Educational Objective<span class="float-right padding-right-24"></span></div>';
+              $output.='<div class="col-md-2 "></div>';
+              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 430px;">';
+              $output .= '<div class="text-center">Recommend appropriate DMARD and biologic therapy in pregnancy...</div>';
+                  $output.='<div class="" id="speaker-google-donut-q10" style="height: 300px;"></div>';
+              $output.='</div>';
+              $output .= '<div class="row text-center">';
+              $output .= '<div class="col-centered" style="margin-bottom:12px;">';
+
+              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#5bbbff"></span>';
+              $output.='<span class="margin-left-8 small">1: Strongly Disagree</span></div>';
+
+              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+              $output.='<span class="glyphicon glyphicon-stop" aria-hidden="true" style="color:#cae9ff"></span>';
+              $output.='<span class="margin-left-8 small">2: Neutral</span></div>';
+
+              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#005fa3"></span>';
+              $output.='<span class="margin-left-8 small">3: Somewhat Agree</span></div>';
+
+              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#D9D9D9"></span>';
+              $output.='<span class="margin-left-8 small">4: Agree</span></div>';
+
+              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#003459"></span>';
+              $output.='<span class="margin-left-8 small">5: Strongly Agree</span></div>';
+              $output .= '</div>';
+
+           $output.='</div>';
+              $output.='<div class="col-md-2 "></div>';
+          $output.='</div>';
+          /**
+           * END CHART
+           */
+        $output.='</div>';
+
+        // $output.='<div id="refresh" class=" col-md-4 " style="">';
+        //   /**
+        //    * START CHART Ques 3
+        //    */
+        //   $output.='<div class="panel">';
+        //   $output.='<div class=" panel-header">Educational Objective<span class="float-right padding-right-24"></span></div>';
+        //       $output.='<div class="col-md-2 "></div>';
+        //       $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 430px;">';
+        //       $output .= '<div class="text-center">Set realistic expectations with these patients for better patient outcomes</div>';
+        //           $output.='<div class="" id="edu-obj-google-hBar-q3" style="height: 300px;"></div>';
+        //       $output.='</div>';
+        //       $output.='<div class="col-md-2 "></div>';
+        //   $output.='</div>';
+        //   /**
+        //    * END CHART
+        //    */
+        // $output.='</div>';
 
     $output.='</div>';
 
