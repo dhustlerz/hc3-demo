@@ -10,24 +10,24 @@
 
              // PAGE CONTENT -->
              echo'<div class="page-content">';
-             if ($request_URI == '/Personal@11001799/hc3-demo/overview.php') {
+             if ($request_URI == '/hc3-demo/overview.php') {
                 include 'content.inc.php';
              }
-             elseif ($request_URI == '/Personal@11001799/hc3-demo/needs-assessment.php') {
+             elseif ($request_URI == '/hc3-demo/needs-assessment.php') {
                  include 'content-needs-assesment.inc.php';
              }
-             elseif($request_URI == '/Personal@11001799/hc3-demo/program-evaluation.php?p=diabetes&t=all')
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&t=all')
              {
-                include 'content-diabetes.inc.php';
+                include 'rheumatoiry/content-rheumatory.inc.php';
              }
-             elseif($request_URI == '/Personal@11001799/hc3-demo/program-evaluation.php?p=diabetes&t=accr')
-             {
-                include 'content-diabetes-accr.inc.php';
-             }
-             elseif($request_URI == '/Personal@11001799/hc3-demo/program-evaluation.php?p=diabetes&t=non-accr')
-             {
-                include 'content-diabetes-non-accr.inc.php';
-             }
+             // elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&t=accr')
+             // {
+             //    include 'content-rheumatory-accr.inc.php';
+             // }
+             // elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&t=non-accr')
+             // {
+             //    include 'content-rheumatory-non-accr.inc.php';
+             // }
 
              echo '</div>';
              // END PAGE CONTENT -->

@@ -232,7 +232,7 @@ function top_navigation() {
 
         $output.='<!-- END TOGGLE NAVIGATION -->';
         $output.='<li >';
-         $output.='<span class="color-002840 font-family-inherit padding-left-40 font-size-20 line-height-2-5 ">KPI Reporting DashBoard</span>';
+         $output.='<span class="color-002840 font-family-inherit padding-left-40 font-size-20 line-height-2-5 ">Pregnancy, Fertility and Breastfeeding</span>';
         $output.='</li>';
         $output.='<!-- END SEARCH -->';
 

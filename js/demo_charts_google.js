@@ -2,95 +2,95 @@ googlecharts();
 function googlecharts() {
 
 
-    /*
-     * Google Bar Province Chart Start
-     */
-      function googleBarProvinceChart() {
-          // just a normal ComboChart setup
-          var data = google.visualization.arrayToDataTable([
-              ['Province', '' ],
-              ['AB', 0.12 ],
-              ['B.C', 0.10],
-              ['MB', 0.04],
-              ['NB', 0.03],
-              ['NFLD', 0.1],
-              ['NS ', 0.07],
-              ['ON', 0.30 ],
-              ['P.E.I', 0.01],
-              ['QC', 0.25 ],
-              ['SASK', 0.07],
+    // /*
+    //  * Google Bar Province Chart Start
+    //  */
+    //   function googleBarProvinceChart() {
+    //       // just a normal ComboChart setup
+    //       var data = google.visualization.arrayToDataTable([
+    //           ['Province', '' ],
+    //           ['AB', 0.12 ],
+    //           ['B.C', 0.10],
+    //           ['MB', 0.04],
+    //           ['NB', 0.03],
+    //           ['NFLD', 0.1],
+    //           ['NS ', 0.07],
+    //           ['ON', 0.30 ],
+    //           ['P.E.I', 0.01],
+    //           ['QC', 0.25 ],
+    //           ['SASK', 0.07],
 
 
-          ]);
-          var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
-          formatter.format(data, 1);
+    //       ]);
+    //       var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
+    //       formatter.format(data, 1);
 
 
-          mydiv = $("#google-bar-province-chart");
-          chart = new google.visualization.BarChart(mydiv[0]);
-          chart.draw(data, {
+    //       mydiv = $("#google-bar-province-chart");
+    //       chart = new google.visualization.BarChart(mydiv[0]);
+    //       chart.draw(data, {
 
-              legend: {position: 'none'},
-              vAxis: {format: "#.#%"},
-              bar: {groupWidth: "85%"},
-              vAxis:{gridlines: {count: 0}},
-              chartArea: {left: 120, top: 10,height:300},
-              focusTarget: 'category',
-              colors:['#00528c']
+    //           legend: {position: 'none'},
+    //           vAxis: {format: "#.#%"},
+    //           bar: {groupWidth: "85%"},
+    //           vAxis:{gridlines: {count: 0}},
+    //           chartArea: {left: 120, top: 10,height:300},
+    //           focusTarget: 'category',
+    //           colors:['#00528c']
 
-          });
+    //       });
 
-          /* Here comes the hack!
-          We're going to add a svg text element to each column bar.
-          This code will work for this data setup only. If you add/remove a series, this code must be adapted
-          */
-          rects = mydiv.find('svg > g > g > g > rect');
-          var row = 0;
-          for (i = 0; i < rects.length; i++) {
-              // this selector also retrieves gridlines
-              // we're excluding them by height
-              el = $(rects[i]);
-              if (parseFloat(el.attr("width")) <= 2) { continue; }
-              aparent = el.parent();
-              do { // skips 'null' values
-                  text = data.getValue(row++, 1);
-              } while (text == null && row < data.getNumberOfRows());
+    //       /* Here comes the hack!
+    //       We're going to add a svg text element to each column bar.
+    //       This code will work for this data setup only. If you add/remove a series, this code must be adapted
+    //       */
+    //       rects = mydiv.find('svg > g > g > g > rect');
+    //       var row = 0;
+    //       for (i = 0; i < rects.length; i++) {
+    //           // this selector also retrieves gridlines
+    //           // we're excluding them by height
+    //           el = $(rects[i]);
+    //           if (parseFloat(el.attr("width")) <= 2) { continue; }
+    //           aparent = el.parent();
+    //           do { // skips 'null' values
+    //               text = data.getValue(row++, 1);
+    //           } while (text == null && row < data.getNumberOfRows());
 
-              if (text) {
-                  text = formatter.formatValue(text);
-                  // see below
-                  pos = getElementPos(el);
-                  attrs = {x: pos.x + pos.width / 1+18, y: pos.y + 14,
-                           fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
-                  aparent.append(addTextNode(attrs, text, aparent));
-              }
-          }
-      }
+    //           if (text) {
+    //               text = formatter.formatValue(text);
+    //               // see below
+    //               pos = getElementPos(el);
+    //               attrs = {x: pos.x + pos.width / 1+18, y: pos.y + 14,
+    //                        fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
+    //               aparent.append(addTextNode(attrs, text, aparent));
+    //           }
+    //       }
+    //   }
 
-      google.load('visualization', '1', {packages: ['corechart']});
-      google.setOnLoadCallback(googleBarProvinceChart);
+    //   google.load('visualization', '1', {packages: ['corechart']});
+    //   google.setOnLoadCallback(googleBarProvinceChart);
 
-      function getElementPos($el) {
-          // returns an object with the element position
-          return {
-              x: parseFloat($el.attr("x")),
-              width: parseFloat($el.attr("width")),
-              y: parseFloat($el.attr("y")),
-              height: parseFloat($el.attr("height"))
-          }
-      }
+    //   function getElementPos($el) {
+    //       // returns an object with the element position
+    //       return {
+    //           x: parseFloat($el.attr("x")),
+    //           width: parseFloat($el.attr("width")),
+    //           y: parseFloat($el.attr("y")),
+    //           height: parseFloat($el.attr("height"))
+    //       }
+    //   }
 
-      function addTextNode(attrs, text, _element) {
-          // creates an svg text node
-        var el = document.createElementNS('http://www.w3.org/2000/svg', "text");
-        for (var k in attrs) { el.setAttribute(k, attrs[k]); }
-        var textNode = document.createTextNode(text);
-        el.appendChild(textNode);
-        return el;
-      }
-      /*
-     * Google Bar Province Chart End
-     */
+    //   function addTextNode(attrs, text, _element) {
+    //       // creates an svg text node
+    //     var el = document.createElementNS('http://www.w3.org/2000/svg', "text");
+    //     for (var k in attrs) { el.setAttribute(k, attrs[k]); }
+    //     var textNode = document.createTextNode(text);
+    //     el.appendChild(textNode);
+    //     return el;
+    //   }
+    //   /*
+    //  * Google Bar Province Chart End
+    //  */
 
 
     /*
@@ -344,5 +344,392 @@ function addTextNode(attrs, text, _element) {
     }
 
 
-}
 
+/*
+ * Business Unit: Rheumatory
+ * Module: The Evolution of Rheumatoid Arthritis Common Barriers in RA Management Piecing Together Solutions.
+ * Program: Pregnancy, Fertility and Breastfeeding
+ */
+    // var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
+    // formatter.format(data, 1);
+
+
+    // mydiv = $("#google-column-bar-chart");
+    // chart = new google.visualization.ComboChart(mydiv[0]);
+    // chart.draw(data, {
+    //      height: 300, seriesType: 'bars',
+    //     legend: {position: 'none'},
+    //     bar: {groupWidth: "55%"},
+    //     vAxis: {format: "#.#%"},
+    //     vAxis:{gridlines: {count: 0}},
+    //     chartArea: {left: 60, top: 30, width: 650},
+    //     focusTarget: 'category',
+    //     colors:['#5bbbff']
+
+    // });
+
+    /*
+     * Google Bar Province Chart Start
+     */
+
+      // Ques 1
+      google.load('visualization', '1', {packages: ['corechart']});
+      google.setOnLoadCallback(eduObjGooglehBarQ1);
+      function eduObjGooglehBarQ1() {
+          // just a normal ComboChart setup
+          var data = google.visualization.arrayToDataTable([
+              ['I am not interested', '' ],
+              ['I see the need BUT…', 0.006 ],
+              ['I would like to learn more', 0.13],
+              ['I am ready to try this', 0.38],
+              ['I am doing this consis-tently', 0.43],
+
+          ]);
+          var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
+          formatter.format(data, 1);
+
+
+          mydiv = $("#edu-obj-google-hBar-q1");
+          chart = new google.visualization.ComboChart(mydiv[0]);
+          chart.draw(data, {
+            height: 400, seriesType: 'bars',
+            legend: {position: 'none'},
+            bar: {groupWidth: "55%"},
+            vAxis: {format: "#.#%"},
+            vAxis:{gridlines: {count: 0}},
+            chartArea: {left: 0, top: 30, width: 650},
+            focusTarget: 'category',
+            colors:['#5bbbff']
+
+              // legend: {position: 'none'},
+              // vAxis: {format: "#.#%"},
+              // bar: {groupWidth: "65%"},
+              // vAxis:{gridlines: {count: 0}},
+              // hAxis:{gridlines: {count: 0}},
+              // chartArea: {left: 120, top: 10,height:300},
+              // focusTarget: 'category',
+              // colors:['#00528c']
+
+          });
+
+          /* Here comes the hack!
+          We're going to add a svg text element to each column bar.
+          This code will work for this data setup only. If you add/remove a series, this code must be adapted
+          */
+          rects = mydiv.find('svg > g > g > g > rect');
+          var row = 0;
+          for (i = 0; i < rects.length; i++) {
+              // this selector also retrieves gridlines
+              // we're excluding them by height
+              el = $(rects[i]);
+              if (parseFloat(el.attr("width")) <= 2) { continue; }
+              aparent = el.parent();
+              do { // skips 'null' values
+                  text = data.getValue(row++, 1);
+              } while (text == null && row < data.getNumberOfRows());
+
+              if (text) {
+                  text = formatter.formatValue(text);
+                  // see below
+                  pos = getElementPos(el);
+                  attrs = {x: pos.x + pos.width / 1-28, y: pos.y - 24,
+                           fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
+                  aparent.append(addTextNode(attrs, text, aparent));
+              }
+          }
+      }
+
+      // Question 2
+
+      google.load('visualization', '1', {packages: ['corechart']});
+      google.setOnLoadCallback(eduObjGooglehBarQ2);
+      function eduObjGooglehBarQ2() {
+          // just a normal ComboChart setup
+          var data = google.visualization.arrayToDataTable([
+              ['I am not interested', '' ],
+              ['I see the need BUT…', 0.006 ],
+              ['I would like to learn more', 0.16],
+              ['I am ready to try this', 0.34],
+              ['I am doing this consis-tently', 0.43],
+
+          ]);
+          var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
+          formatter.format(data, 1);
+
+
+          mydiv = $("#edu-obj-google-hBar-q2");
+          chart = new google.visualization.ComboChart(mydiv[0]);
+          chart.draw(data, {
+              height: 400, seriesType: 'bars',
+            legend: {position: 'none'},
+            bar: {groupWidth: "55%"},
+            vAxis: {format: "#.#%"},
+            vAxis:{gridlines: {count: 0}},
+            chartArea: {left: 0, top: 30, width: 650},
+            focusTarget: 'category',
+            colors:['#5bbbff']
+              // legend: {position: 'none'},
+              // vAxis: {format: "#.#%"},
+              // bar: {groupWidth: "65%"},
+              // vAxis:{gridlines: {count: 0}},
+              // hAxis:{gridlines: {count: 0}},
+              // chartArea: {left: 120, top: 10,height:300},
+              // focusTarget: 'category',
+              // colors:['#00528c']
+
+          });
+
+          /* Here comes the hack!
+          We're going to add a svg text element to each column bar.
+          This code will work for this data setup only. If you add/remove a series, this code must be adapted
+          */
+          rects = mydiv.find('svg > g > g > g > rect');
+          var row = 0;
+          for (i = 0; i < rects.length; i++) {
+              // this selector also retrieves gridlines
+              // we're excluding them by height
+              el = $(rects[i]);
+              if (parseFloat(el.attr("width")) <= 2) { continue; }
+              aparent = el.parent();
+              do { // skips 'null' values
+                  text = data.getValue(row++, 1);
+              } while (text == null && row < data.getNumberOfRows());
+
+              if (text) {
+                  text = formatter.formatValue(text);
+                  // see below
+                  pos = getElementPos(el);
+                  attrs = {x: pos.x + pos.width / 1-28, y: pos.y - 24,
+                           fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
+                  aparent.append(addTextNode(attrs, text, aparent));
+              }
+          }
+      }
+
+            // Question 3
+
+      google.load('visualization', '1', {packages: ['corechart']});
+      google.setOnLoadCallback(eduObjGooglehBarQ3);
+      function eduObjGooglehBarQ3() {
+          // just a normal ComboChart setup
+          var data = google.visualization.arrayToDataTable([
+              ['I am not interested', '' ],
+              ['I see the need BUT…', 0.006 ],
+              ['I would like to learn more', 0.14],
+              ['I am ready to try this', 0.41],
+              ['I am doing this consis-tently', 0.39],
+
+          ]);
+          var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
+          formatter.format(data, 1);
+
+
+          mydiv = $("#edu-obj-google-hBar-q3");
+          chart = new google.visualization.ComboChart(mydiv[0]);
+          chart.draw(data, {
+            height: 400, seriesType: 'bars',
+            legend: {position: 'none'},
+            bar: {groupWidth: "55%"},
+            vAxis: {format: "#.#%"},
+            vAxis:{gridlines: {count: 0}},
+            chartArea: {left: 0, top: 30, width: 650},
+            focusTarget: 'category',
+            colors:['#5bbbff']
+
+              // legend: {position: 'none'},
+              // vAxis: {format: "#.#%"},
+              // bar: {groupWidth: "65%"},
+              // vAxis:{gridlines: {count: 0}},
+              // hAxis:{gridlines: {count: 0}},
+              // chartArea: {left: 120, top: 10,height:300},
+              // focusTarget: 'category',
+              // colors:['#00528c']
+
+          });
+
+          /* Here comes the hack!
+          We're going to add a svg text element to each column bar.
+          This code will work for this data setup only. If you add/remove a series, this code must be adapted
+          */
+          rects = mydiv.find('svg > g > g > g > rect');
+          var row = 0;
+          for (i = 0; i < rects.length; i++) {
+              // this selector also retrieves gridlines
+              // we're excluding them by height
+              el = $(rects[i]);
+              if (parseFloat(el.attr("width")) <= 2) { continue; }
+              aparent = el.parent();
+              do { // skips 'null' values
+                  text = data.getValue(row++, 1);
+              } while (text == null && row < data.getNumberOfRows());
+
+              if (text) {
+                  text = formatter.formatValue(text);
+                  // see below
+                  pos = getElementPos(el);
+                  attrs = {x: pos.x + pos.width / 1-28, y: pos.y - 24,
+                           fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
+                  aparent.append(addTextNode(attrs, text, aparent));
+              }
+          }
+      }
+
+
+
+
+
+        // Question 4
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(programGooglePieQ4);
+      function programGooglePieQ4() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Fear of Needles', 'Hours per Day'],
+          ['Strongly Disagree',     2],
+          ['Neutral',      1],
+          ['Somewhat Agree',  9],
+          ['Agree',       49],
+          ['Strongly Agree',    88]
+        ]);
+
+        var options = {
+          height: 300,
+          chartArea:{left:"",top:"10%",width:"90%",height:"90%"},
+          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-q4'));
+
+        chart.draw(data, options);
+      }
+
+      // Question 5
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(programGooglePieQ5);
+      function programGooglePieQ5() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Fear of Needles', 'Hours per Day'],
+          ['Strongly Disagree',     2],
+          ['Neutral',      0],
+          ['Somewhat Agree',  10],
+          ['Agree',       53],
+          ['Strongly Agree',    88]
+        ]);
+
+        var options = {
+          height: 300,
+          chartArea:{left:"",top:"10%",width:"90%",height:"90%"},
+          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-q5'));
+
+        chart.draw(data, options);
+      }
+
+      // Question 6
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(programGooglePieQ6);
+      function programGooglePieQ6() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Fear of Needles', 'Hours per Day'],
+          ['Strongly Disagree',     2],
+          ['Neutral',      1],
+          ['Somewhat Agree',  2],
+          ['Agree',       50],
+          ['Strongly Agree',    97]
+        ]);
+
+        var options = {
+          height: 300,
+          chartArea:{left:"",top:"10%",width:"90%",height:"90%"},
+          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-q6'));
+
+        chart.draw(data, options);
+      }
+      // Question 9
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(speakerGoogleDonutQ9);
+      function speakerGoogleDonutQ9() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Fear of Needles', 'Hours per Day'],
+          ['Strongly Disagree',     2],
+          ['Neutral',      4],
+          ['Somewhat Agree',  5],
+          ['Agree',       45],
+          ['Strongly Agree',    93]
+        ]);
+
+        var options = {
+          height: 300,
+          pieHole: 0.4,
+          chartArea:{left:"",top:"10%",width:"90%",height:"90%"},
+          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-q9'));
+
+        chart.draw(data, options);
+      }
+      // Question 10
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(speakerGoogleDonutQ10);
+      function speakerGoogleDonutQ10() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Fear of Needles', 'Hours per Day'],
+          ['Strongly Disagree',     2],
+          ['Neutral',      6],
+          ['Somewhat Agree',  5],
+          ['Agree',       46],
+          ['Strongly Agree',    87]
+        ]);
+
+        var options = {
+          pieHole: 0.4,
+          height: 300,
+          chartArea:{left:"",top:"10%",width:"90%",height:"90%"},
+          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-q10'));
+
+        chart.draw(data, options);
+      }
+
+
+}
+ function getElementPos($el) {
+          // returns an object with the element position
+          return {
+              x: parseFloat($el.attr("x")),
+              width: parseFloat($el.attr("width")),
+              y: parseFloat($el.attr("y")),
+              height: parseFloat($el.attr("height"))
+          }
+      }
+
+      function addTextNode(attrs, text, _element) {
+          // creates an svg text node
+        var el = document.createElementNS('http://www.w3.org/2000/svg', "text");
+        for (var k in attrs) { el.setAttribute(k, attrs[k]); }
+        var textNode = document.createTextNode(text);
+        el.appendChild(textNode);
+        return el;
+      }

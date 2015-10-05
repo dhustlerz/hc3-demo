@@ -37,11 +37,11 @@ $output = '';
 
               $output.='<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">';
 
-                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Adding Meal‐Time Insulin to Basal Insulin</a></li>';
-                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Insulin Empowerment Program</a></li>';
-                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Prise Linsulinotherapie_FMOQ</a></li>';
-                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Premixed Insulin BID as a Starter Insulin</a></li>';
-                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">le traitement du diabète chez la personne âgée</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pregnancy, Fertility and Breastfeeding</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Patient Wanting to Stop Methotrexate (MTX) when on Biologic Therapy</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Biosimilars (Subsequent entry biologics or SEBs)</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Ultrasound in RA</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Counselling about DMARD Efficacy and Safety</a></li>';
               $output.='</ul>';
 
             $output.='</div>';
