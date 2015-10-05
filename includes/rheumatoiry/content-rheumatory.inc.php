@@ -87,7 +87,76 @@ $output.='<div class="page-content-wrap ">';
      * END Widgets 2
      */
 
+       // Break Down 2
 
+    $output.='<div class="row margin-top-24" >';
+
+        $output.='<div id="refresh" class=" col-md-12 " style="">';
+          /**
+           * START REGULAR PIE CHART
+           */
+          $output.='<div class="panel ">';
+          $output.='<div class=" panel-header">After attending this program<span class="float-right padding-right-24"></span></div>';
+            $output .= '<div class="col-md-4">';
+
+              $output.='<div class="col-md-2 "></div>';
+              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
+              $output .= '<div class="text-center">The content of the program was highly relevant to my practice concerns</div>';
+                  $output.='<div class="" id="program-google-pie-q4" style="height: 300px;"></div>';
+              $output.='</div>';
+              $output.='<div class="col-md-2 "></div>';
+            $output.='</div>';
+            $output .= '<div class="col-md-4">';
+              $output.='<div class="col-md-2 "></div>';
+              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
+              $output .= '<div class="text-center">As a result of attending this program, I feel I am better to provide care to my patients</div>';
+                  $output.='<div class="" id="program-google-pie-q5" style="height: 300px;"></div>';
+              $output.='</div>';
+              $output.='<div class="col-md-2 "></div>';
+            $output.='</div>';
+            $output .= '<div class="col-md-4">';
+              $output.='<div class="col-md-2 "></div>';
+              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
+              $output .= '<div class="text-center">I would recommend this program to a peer</div>';
+                  $output.='<div class="" id="program-google-pie-q6" style="height: 300px;"></div>';
+              $output.='</div>';
+              $output.='<div class="col-md-2 "></div>';
+            $output.='</div>';
+
+              // colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+            $output .= '<div class="row text-center">';
+              $output .= '<div class="col-centered" style="margin-bottom:12px;">';
+
+              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#5bbbff"></span>';
+              $output.='<span class="margin-left-8 small">1: Strongly Disagree</span></div>';
+
+              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+              $output.='<span class="glyphicon glyphicon-stop" aria-hidden="true" style="color:#cae9ff"></span>';
+              $output.='<span class="margin-left-8 small">2: Neutral</span></div>';
+
+              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#005fa3"></span>';
+              $output.='<span class="margin-left-8 small">3: Somewhat Agree</span></div>';
+
+              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#D9D9D9"></span>';
+              $output.='<span class="margin-left-8 small">4: Agree</span></div>';
+
+              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#003459"></span>';
+              $output.='<span class="margin-left-8 small">5: Strongly Agree</span></div>';
+              $output .= '</div>';
+              $output .= '</div>';
+          $output.='</div>';
+          /**
+           * END REGULAR PIE CHART
+           */
+
+
+        $output.='</div>';
+
+    $output.='</div>';
     // Break down 1
 
     $output.='<div class="row margin-top-24" >';
@@ -147,6 +216,7 @@ $output.='<div class="page-content-wrap ">';
         $output.='</div>';
 
     $output.='</div>';
+
 
       // Break Down 4
 
@@ -256,77 +326,6 @@ $output.='<div class="page-content-wrap ">';
         //    * END CHART
         //    */
         // $output.='</div>';
-
-    $output.='</div>';
-
-    // Break Down 2
-
-    $output.='<div class="row margin-top-24" >';
-
-        $output.='<div id="refresh" class=" col-md-12 " style="">';
-          /**
-           * START REGULAR PIE CHART
-           */
-          $output.='<div class="panel ">';
-          $output.='<div class=" panel-header">After attending this program<span class="float-right padding-right-24"></span></div>';
-            $output .= '<div class="col-md-4">';
-
-              $output.='<div class="col-md-2 "></div>';
-              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
-              $output .= '<div class="text-center">The content of the program was highly relevant to my practice concerns</div>';
-                  $output.='<div class="" id="program-google-pie-q4" style="height: 300px;"></div>';
-              $output.='</div>';
-              $output.='<div class="col-md-2 "></div>';
-            $output.='</div>';
-            $output .= '<div class="col-md-4">';
-              $output.='<div class="col-md-2 "></div>';
-              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
-              $output .= '<div class="text-center">As a result of attending this program, I feel I am better to provide care to my patients</div>';
-                  $output.='<div class="" id="program-google-pie-q5" style="height: 300px;"></div>';
-              $output.='</div>';
-              $output.='<div class="col-md-2 "></div>';
-            $output.='</div>';
-            $output .= '<div class="col-md-4">';
-              $output.='<div class="col-md-2 "></div>';
-              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
-              $output .= '<div class="text-center">I would recommend this program to a peer</div>';
-                  $output.='<div class="" id="program-google-pie-q6" style="height: 300px;"></div>';
-              $output.='</div>';
-              $output.='<div class="col-md-2 "></div>';
-            $output.='</div>';
-
-              // colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
-            $output .= '<div class="row text-center">';
-              $output .= '<div class="col-centered" style="margin-bottom:12px;">';
-
-              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#5bbbff"></span>';
-              $output.='<span class="margin-left-8 small">1: Strongly Disagree</span></div>';
-
-              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-              $output.='<span class="glyphicon glyphicon-stop" aria-hidden="true" style="color:#cae9ff"></span>';
-              $output.='<span class="margin-left-8 small">2: Neutral</span></div>';
-
-              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#005fa3"></span>';
-              $output.='<span class="margin-left-8 small">3: Somewhat Agree</span></div>';
-
-              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#D9D9D9"></span>';
-              $output.='<span class="margin-left-8 small">4: Agree</span></div>';
-
-              $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#003459"></span>';
-              $output.='<span class="margin-left-8 small">5: Strongly Agree</span></div>';
-              $output .= '</div>';
-              $output .= '</div>';
-          $output.='</div>';
-          /**
-           * END REGULAR PIE CHART
-           */
-
-
-        $output.='</div>';
 
     $output.='</div>';
 
