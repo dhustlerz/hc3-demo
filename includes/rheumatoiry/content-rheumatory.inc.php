@@ -36,15 +36,15 @@ $output.='<div class="page-content-wrap ">';
      */
 
      $Ques_sent = array (
-      'value' => 9 ,
+      'value' => 46 ,
       'label' => 'Total Programs',
       );
       $Response_rate  = array (
-      'value' => 54 ,
+      'value' => 165 ,
       'label' => 'Total Evaluations',
       );
      $Responses = array (
-      'value' => 61 ,
+      'value' => 217 ,
       'label' => 'Total Participants',
       );
 
