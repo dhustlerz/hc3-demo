@@ -8,7 +8,8 @@ $output = '';
      *
      */
 
-     $output = top_navigation();
+     $Navigation_text = "Pregnancy, Fertility and Breastfeeding";
+     $output = top_navigation($Navigation_text);
     /**
      * START X-NAVIGATION VERTICAL 2
      *

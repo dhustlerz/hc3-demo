@@ -1,7 +1,7 @@
   /* gauge.js start */
 if (window.location.pathname+window.location.search == '/hc3-demo/overview.php') {
   console.log('working');
-  gaugejs("dashboard-gauge","dashboard-gauge-font",90);
+  gaugejs("dashboard-gauge","dashboard-gauge-font",93);
 }
 if (window.location.pathname+window.location.search == '/hc3-demo/program-evaluation.php?p=diabetes&t=all') {
   gaugejs("diabetes-gauge","diabetes-gauge-font",90);

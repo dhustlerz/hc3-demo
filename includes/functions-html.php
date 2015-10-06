@@ -192,7 +192,7 @@ function widget2( $avgSpeakerRating, $avgProgramRating, $CustomerSatisfaction ) 
  * This fuction defines the navigation bar on the top of each page
  */
 
-function top_navigation() {
+function top_navigation($Navigation_text) {
     /**
      * START X-NAVIGATION VERTICAL 1
      *
@@ -232,7 +232,7 @@ function top_navigation() {
 
         $output.='<!-- END TOGGLE NAVIGATION -->';
         $output.='<li >';
-         $output.='<span class="color-002840 font-family-inherit padding-left-40 font-size-20 line-height-2-5 ">Pregnancy, Fertility and Breastfeeding</span>';
+         $output.='<span class="color-002840 font-family-inherit padding-left-40 font-size-20 line-height-2-5 ">'.$Navigation_text.'</span>';
         $output.='</li>';
         $output.='<!-- END SEARCH -->';
 

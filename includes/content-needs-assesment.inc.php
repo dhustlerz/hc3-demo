@@ -8,7 +8,8 @@ $output = '';
      *
      */
 
-     $output = top_navigation();
+    $Navigation_text = "KPI Reporting Dashboard";
+    $output = top_navigation($Navigation_text);
     /**
      * START X-NAVIGATION VERTICAL 2
      *
@@ -54,17 +55,17 @@ $output.='<div class="page-content-wrap ">';
      * START  Widgets 1
      */
 
-     $Ques_sent = array (
-      'value' => 1475 ,
-      'label' => 'Questionairres Sent',
+      $Ques_sent = array (
+      'value' => 121 ,
+      'label' => 'Total Programs',
       );
       $Response_rate  = array (
-      'value' => 275 ,
-      'label' => 'Responses',
+      'value' => 532 ,
+      'label' => 'Total Evaluations',
       );
      $Responses = array (
-      'value' => 18.6 ,
-      'label' => 'Response Rate',
+      'value' => 624 ,
+      'label' => 'Total Participants',
       );
 
      $widget1 = widget1( $Ques_sent,  $Response_rate , $Responses);

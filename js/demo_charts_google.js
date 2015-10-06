@@ -2,95 +2,93 @@ googlecharts();
 function googlecharts() {
 
 
-    // /*
-    //  * Google Bar Province Chart Start
-    //  */
-    //   function googleBarProvinceChart() {
-    //       // just a normal ComboChart setup
-    //       var data = google.visualization.arrayToDataTable([
-    //           ['Province', '' ],
-    //           ['AB', 0.12 ],
-    //           ['B.C', 0.10],
-    //           ['MB', 0.04],
-    //           ['NB', 0.03],
-    //           ['NFLD', 0.1],
-    //           ['NS ', 0.07],
-    //           ['ON', 0.30 ],
-    //           ['P.E.I', 0.01],
-    //           ['QC', 0.25 ],
-    //           ['SASK', 0.07],
+    /*
+     * Google Bar Province Chart Start
+     */
+      function googleBarProvinceChart() {
+          // just a normal ComboChart setup
+
+          var data = google.visualization.arrayToDataTable([
+              ['Province', '' ],
+              ['AB', 0.18 ],
+              ['BC', 0.12],
+              ['MB', 0.34],
+              ['NB', 0.01],
+              ['ON', 0.35 ],
+              ['QC', 0.50 ],
+              ['SASK', 0.02],
 
 
-    //       ]);
-    //       var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
-    //       formatter.format(data, 1);
+          ]);
+          var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
+          formatter.format(data, 1);
 
 
-    //       mydiv = $("#google-bar-province-chart");
-    //       chart = new google.visualization.BarChart(mydiv[0]);
-    //       chart.draw(data, {
+          mydiv = $("#google-bar-province-chart");
+          chart = new google.visualization.BarChart(mydiv[0]);
+          chart.draw(data, {
 
-    //           legend: {position: 'none'},
-    //           vAxis: {format: "#.#%"},
-    //           bar: {groupWidth: "85%"},
-    //           vAxis:{gridlines: {count: 0}},
-    //           chartArea: {left: 120, top: 10,height:300},
-    //           focusTarget: 'category',
-    //           colors:['#00528c']
+              legend: {position: 'none'},
+              vAxis: {format: "#.#%"},
+              bar: {groupWidth: "85%"},
+              vAxis:{gridlines: {count: 0}},
+              chartArea: {left: 120, top: 10,height:300},
+              focusTarget: 'category',
+              colors:['#00528c']
 
-    //       });
+          });
 
-    //       /* Here comes the hack!
-    //       We're going to add a svg text element to each column bar.
-    //       This code will work for this data setup only. If you add/remove a series, this code must be adapted
-    //       */
-    //       rects = mydiv.find('svg > g > g > g > rect');
-    //       var row = 0;
-    //       for (i = 0; i < rects.length; i++) {
-    //           // this selector also retrieves gridlines
-    //           // we're excluding them by height
-    //           el = $(rects[i]);
-    //           if (parseFloat(el.attr("width")) <= 2) { continue; }
-    //           aparent = el.parent();
-    //           do { // skips 'null' values
-    //               text = data.getValue(row++, 1);
-    //           } while (text == null && row < data.getNumberOfRows());
+          /* Here comes the hack!
+          We're going to add a svg text element to each column bar.
+          This code will work for this data setup only. If you add/remove a series, this code must be adapted
+          */
+          rects = mydiv.find('svg > g > g > g > rect');
+          var row = 0;
+          for (i = 0; i < rects.length; i++) {
+              // this selector also retrieves gridlines
+              // we're excluding them by height
+              el = $(rects[i]);
+              if (parseFloat(el.attr("width")) <= 2) { continue; }
+              aparent = el.parent();
+              do { // skips 'null' values
+                  text = data.getValue(row++, 1);
+              } while (text == null && row < data.getNumberOfRows());
 
-    //           if (text) {
-    //               text = formatter.formatValue(text);
-    //               // see below
-    //               pos = getElementPos(el);
-    //               attrs = {x: pos.x + pos.width / 1+18, y: pos.y + 14,
-    //                        fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
-    //               aparent.append(addTextNode(attrs, text, aparent));
-    //           }
-    //       }
-    //   }
+              if (text) {
+                  text = formatter.formatValue(text);
+                  // see below
+                  pos = getElementPos(el);
+                  attrs = {x: pos.x + pos.width / 1+18, y: pos.y + 14,
+                           fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
+                  aparent.append(addTextNode(attrs, text, aparent));
+              }
+          }
+      }
 
-    //   google.load('visualization', '1', {packages: ['corechart']});
-    //   google.setOnLoadCallback(googleBarProvinceChart);
+      google.load('visualization', '1', {packages: ['corechart']});
+      google.setOnLoadCallback(googleBarProvinceChart);
 
-    //   function getElementPos($el) {
-    //       // returns an object with the element position
-    //       return {
-    //           x: parseFloat($el.attr("x")),
-    //           width: parseFloat($el.attr("width")),
-    //           y: parseFloat($el.attr("y")),
-    //           height: parseFloat($el.attr("height"))
-    //       }
-    //   }
+      function getElementPos($el) {
+          // returns an object with the element position
+          return {
+              x: parseFloat($el.attr("x")),
+              width: parseFloat($el.attr("width")),
+              y: parseFloat($el.attr("y")),
+              height: parseFloat($el.attr("height"))
+          }
+      }
 
-    //   function addTextNode(attrs, text, _element) {
-    //       // creates an svg text node
-    //     var el = document.createElementNS('http://www.w3.org/2000/svg', "text");
-    //     for (var k in attrs) { el.setAttribute(k, attrs[k]); }
-    //     var textNode = document.createTextNode(text);
-    //     el.appendChild(textNode);
-    //     return el;
-    //   }
-    //   /*
-    //  * Google Bar Province Chart End
-    //  */
+      function addTextNode(attrs, text, _element) {
+          // creates an svg text node
+        var el = document.createElementNS('http://www.w3.org/2000/svg', "text");
+        for (var k in attrs) { el.setAttribute(k, attrs[k]); }
+        var textNode = document.createTextNode(text);
+        el.appendChild(textNode);
+        return el;
+      }
+      /*
+     * Google Bar Province Chart End
+     */
 
 
     /*
@@ -709,6 +707,30 @@ function addTextNode(attrs, text, _element) {
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-q10'));
+
+        chart.draw(data, options);
+      }
+     // mainpage mainPage-google-donut
+
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(mainPageGoogleDonut);
+      function mainPageGoogleDonut() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Fear of Needles', 'Hours per Day'],
+          ['Responded Yes',     77],
+          ['Responded No',  23],
+        ]);
+
+        var options = {
+          pieHole: 0.4,
+          height: 280,
+          chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
+          colors:['#5bbbff','#003459'],
+          legend: {  alignment: 'top',textStyle: {fontSize: 12} ,position: 'none' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('mainPage-google-donut'));
 
         chart.draw(data, options);
       }

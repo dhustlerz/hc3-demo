@@ -6,23 +6,20 @@ var morrisCharts = function() {
       element: 'morris-line-example',
 
       data: [
-        { month: '01', a: 50, b: 150 },
-        { month: '02', a: 56,  b: 100 },
-        { month: '03', a: 47,  b: 80 },
-        { month: '04', a: 77,  b: 77 },
-        { month: '05', a: 186,  b: 120 },
-        { month: '06', a: 185,  b: 210 },
-        { month: '07', a: 177, b: 220 }
+        { month: '2013', a: 2},
+        { month: '2014', a: 97 },
+        { month: '2015', a: 22 },
+
       ],
       xkey: 'month',
-      ykeys: ['a', 'b'],
-      labels: ['Accredited', 'Non accredited'],
+      ykeys: ['a'],
+      labels: ['Annual Totals'],
       resize: true,
-      xLabels: 'month',
-      lineColors: ['#7A92A3', '#0B62A4'],
-      xLabelFormat : function (x) {
-        return months[x.getMonth()];
-        }
+      xLabels: 'year',
+      lineColors: ['#7A92A3'],
+      // xLabelFormat : function (x) {
+      //   return months[x.getMonth()];
+      //   }
     });
 
 
