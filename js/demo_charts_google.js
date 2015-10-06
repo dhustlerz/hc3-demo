@@ -370,7 +370,7 @@ function addTextNode(attrs, text, _element) {
      * Google Bar Province Chart Start
      */
 
-      // Ques 1
+      // Question 1
       google.load('visualization', '1', {packages: ['corechart']});
       google.setOnLoadCallback(eduObjGooglehBarQ1);
       function eduObjGooglehBarQ1() {
@@ -390,7 +390,7 @@ function addTextNode(attrs, text, _element) {
           mydiv = $("#edu-obj-google-hBar-q1");
           chart = new google.visualization.ComboChart(mydiv[0]);
           chart.draw(data, {
-            height: 400, seriesType: 'bars',
+            height: 300, seriesType: 'bars',
             legend: {position: 'none'},
             bar: {groupWidth: "55%"},
             vAxis: {format: "#.#%"},
@@ -430,7 +430,7 @@ function addTextNode(attrs, text, _element) {
                   text = formatter.formatValue(text);
                   // see below
                   pos = getElementPos(el);
-                  attrs = {x: pos.x + pos.width / 1-28, y: pos.y - 24,
+                  attrs = {x: pos.x + pos.width / 1-28, y: pos.y - 14,
                            fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
                   aparent.append(addTextNode(attrs, text, aparent));
               }
@@ -458,7 +458,7 @@ function addTextNode(attrs, text, _element) {
           mydiv = $("#edu-obj-google-hBar-q2");
           chart = new google.visualization.ComboChart(mydiv[0]);
           chart.draw(data, {
-              height: 400, seriesType: 'bars',
+            height: 300, seriesType: 'bars',
             legend: {position: 'none'},
             bar: {groupWidth: "55%"},
             vAxis: {format: "#.#%"},
@@ -497,7 +497,7 @@ function addTextNode(attrs, text, _element) {
                   text = formatter.formatValue(text);
                   // see below
                   pos = getElementPos(el);
-                  attrs = {x: pos.x + pos.width / 1-28, y: pos.y - 24,
+                  attrs = {x: pos.x + pos.width / 1-28, y: pos.y - 14,
                            fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
                   aparent.append(addTextNode(attrs, text, aparent));
               }
@@ -525,7 +525,7 @@ function addTextNode(attrs, text, _element) {
           mydiv = $("#edu-obj-google-hBar-q3");
           chart = new google.visualization.ComboChart(mydiv[0]);
           chart.draw(data, {
-            height: 400, seriesType: 'bars',
+            height: 300, seriesType: 'bars',
             legend: {position: 'none'},
             bar: {groupWidth: "55%"},
             vAxis: {format: "#.#%"},
@@ -565,7 +565,7 @@ function addTextNode(attrs, text, _element) {
                   text = formatter.formatValue(text);
                   // see below
                   pos = getElementPos(el);
-                  attrs = {x: pos.x + pos.width / 1-28, y: pos.y - 24,
+                  attrs = {x: pos.x + pos.width / 1-28, y: pos.y - 14,
                            fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
                   aparent.append(addTextNode(attrs, text, aparent));
               }
@@ -593,7 +593,7 @@ function addTextNode(attrs, text, _element) {
 
         var options = {
           height: 300,
-          chartArea:{left:"",top:"10%",width:"90%",height:"90%"},
+          chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
           colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
@@ -620,7 +620,7 @@ function addTextNode(attrs, text, _element) {
 
         var options = {
           height: 300,
-          chartArea:{left:"",top:"10%",width:"90%",height:"90%"},
+          chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
           colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
@@ -647,7 +647,7 @@ function addTextNode(attrs, text, _element) {
 
         var options = {
           height: 300,
-          chartArea:{left:"",top:"10%",width:"90%",height:"90%"},
+          chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
           colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
@@ -674,7 +674,7 @@ function addTextNode(attrs, text, _element) {
         var options = {
           height: 300,
           pieHole: 0.4,
-          chartArea:{left:"",top:"10%",width:"90%",height:"90%"},
+          chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
           colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
@@ -701,7 +701,7 @@ function addTextNode(attrs, text, _element) {
         var options = {
           pieHole: 0.4,
           height: 300,
-          chartArea:{left:"",top:"10%",width:"90%",height:"90%"},
+          chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
           colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
