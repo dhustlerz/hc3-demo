@@ -25,8 +25,8 @@ function gaugejs(GaugeId,GaugeTextId,GaugeValue) {
         color: '#000000' // Fill color
       },
       limitMax: 'false',   // If true, the pointer will not go past the end of the gauge
-      colorStart: '#2DAAE1',   // Colors
-      colorStop: '#2DAAE1',    // just experiment with them
+      colorStart: '#D7AF51',   // Colors
+      colorStop: '#D7AF51',    // just experiment with them
       strokeColor: '#E0E0E0',   // to see which ones work best for you
       generateGradient: true
     };

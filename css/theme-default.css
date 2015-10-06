@@ -47,7 +47,7 @@ body {
   //background: #f5f5f5 url('../img/bg.png') left top repeat;
   position: relative;
   font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #003459;
   overflow-x: hidden;
 }
@@ -7584,4 +7584,9 @@ li.ext_zip {
   top: 0;
   bottom: 0;
   background: #fff;
+}
+
+.bu-rheumatory .panel-header {
+  /*colors:['#BF2A2F', '#D7AF51', '#6E1612','#878369','#DA984C'],*/
+  background-color: #878369;
 }

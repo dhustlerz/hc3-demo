@@ -85,42 +85,42 @@ $output.='<div class="page-content-wrap ">';
      * END Widgets 2
      */
 
-    $output.='<div class="row margin-top-24" >';
+    // $output.='<div class="row margin-top-24" >';
 
-        $output.='<div id="refresh" class=" col-md-12 " style="">';
-          /**
-           * START REGULAR PIE CHART
-           */
-          $output.='<div class="panel ">';
-          $output.='<div class=" panel-header">Participation Breakdown<span class="float-right padding-right-24">N=275</span></div>';
-              $output.='<div class="col-md-2 "></div>';
-              $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
-                  $output.='<div class="" id="google-bar-province-chart" style="height: 300px;"></div>';
-              $output.='</div>';
-              $output.='<div class="col-md-2 "></div>';
-          $output.='</div>';
-          /**
-           * END REGULAR PIE CHART
-           */
-        $output.='</div>';
+    //     $output.='<div id="refresh" class=" col-md-12 " style="">';
+    //       /**
+    //        * START REGULAR PIE CHART
+    //        */
+    //       $output.='<div class="panel ">';
+    //       $output.='<div class=" panel-header">Participation Breakdown<span class="float-right padding-right-24">N=275</span></div>';
+    //           $output.='<div class="col-md-2 "></div>';
+    //           $output.='<div class="col-md-8 panel-body bg-ffffff" style="height: 350px;">';
+    //               $output.='<div class="" id="google-bar-province-chart" style="height: 300px;"></div>';
+    //           $output.='</div>';
+    //           $output.='<div class="col-md-2 "></div>';
+    //       $output.='</div>';
+    //       /**
+    //        * END REGULAR PIE CHART
+    //        */
+    //     $output.='</div>';
 
-        // $output.='<div class="col-md-6 " style="">';
-        //     /**
-        //      * START REGULAR PIE CHART
-        //      */
-        //     $output.='<div class="panel ">';
-        //     $output.='<div class=" panel-header">Meeting Activity YTD </div>';
-        //         $output.='<div class="panel-body bg-ffffff padding-0">';
-        //             $output.='<div class="" id="morris-line-example" style="height: 300px;"><svg></svg></div>';
-        //         $output.='</div>';
-        //     $output.='</div>';
-        //     /**
-        //      * END REGULAR PIE CHART
-        //      */
-        // $output.='</div>';
+    //     // $output.='<div class="col-md-6 " style="">';
+    //     //     /**
+    //     //      * START REGULAR PIE CHART
+    //     //      */
+    //     //     $output.='<div class="panel ">';
+    //     //     $output.='<div class=" panel-header">Meeting Activity YTD </div>';
+    //     //         $output.='<div class="panel-body bg-ffffff padding-0">';
+    //     //             $output.='<div class="" id="morris-line-example" style="height: 300px;"><svg></svg></div>';
+    //     //         $output.='</div>';
+    //     //     $output.='</div>';
+    //     //     /**
+    //     //      * END REGULAR PIE CHART
+    //     //      */
+    //     // $output.='</div>';
 
 
-    $output.='</div>';
+    // $output.='</div>';
 
     $output.='<div class="row margin-top-24">';
           $output.='<div class="col-md-6 ">';

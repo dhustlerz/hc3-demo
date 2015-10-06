@@ -237,10 +237,10 @@ function top_navigation($Navigation_text) {
         $output.='<!-- END SEARCH -->';
 
 
-            $output.='<li class=" pull-right ">';
-                $output.='<div id="reportrange" class="reportrange border-radius-6 margin-right-6 color-fff bg-005180 padding-px-5 margin-top-10  ">';
-                $output.='<span></span><b class="caret"></b>';
-            $output.='</div>';
+            // $output.='<li class=" pull-right ">';
+            //     $output.='<div id="reportrange" class="reportrange border-radius-6 margin-right-6 color-fff bg-005180 padding-px-5 margin-top-10  ">';
+            //     $output.='<span></span><b class="caret"></b>';
+            // $output.='</div>';
         $output.='</li>';
 
       $output.='</ul>';
@@ -248,5 +248,33 @@ function top_navigation($Navigation_text) {
 
     /*--------------------------------------------------------------------------------------------------------------------------------------*/
     return $output;
+}
+
+function choose_modules() {
+  $output = '';
+    $output.='<div class="float-right " >';
+         // $output.='<li>';
+
+            $output.='<div class="dropdown">';
+              $output.='<button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="false">';
+
+                $output.='---- Choose ----     ';
+                $output.='<span style="margin-left: 4px;" class="caret"></span>';
+                $output.='<span class="sr-only">Toggle Dropdown</span>';
+
+              $output.='</button>';
+
+              $output.='<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">';
+
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="program-evaluation.php?p=rheumatory&t=all">Module 1</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 2</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 3</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 4</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 5</a></li>';
+              $output.='</ul>';
+
+            $output.='</div>';
+      $output.='</div>';
+      return $output;
 }
     ?>

@@ -19,8 +19,12 @@ $output = '';
      * START BREADCRUMB
      */
     $output.='<ul class="breadcrumb">';
-      $output.='<li><a href="#">Home</a></li>';
-      $output.='<li class="active">Dashboard</li>';
+    $output.='<li><a href="#">Program Evaluation</a></li>';
+    $output.='<li class="active">Rheumatory</li>';
+    $output.='<li class="active">All Programs</li>';
+    $output.=choose_modules();
+
+
     $output.='</ul>';
 /**
  * END BREADCRUMB
@@ -29,7 +33,7 @@ $output = '';
 /**
  * PAGE CONTENT WRAPPER
  */
-$output.='<div class="page-content-wrap ">';
+$output.='<div class="page-content-wrap bu-rheumatory">';
 
     /**
      * START  Widgets 1
@@ -127,16 +131,16 @@ $output.='<div class="page-content-wrap ">';
               $output .= '<div class="text-center">77% responded Yes</div>';
                   $output.='<div class="" id="mainPage-google-donut" style="height: 200px;"></div>';
               $output.='</div>';
-                  //           // colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+                  // colors:['#BF2A2F', '#D7AF51', '#6E1612','#878369','#DA984C'],,
             $output .= '<div class="row text-center">';
               $output .= '<div class="col-centered" style="margin-bottom:12px;">';
 
               $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#5bbbff"></span>';
+              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#BF2A2F"></span>';
               $output.='<span class="margin-left-8 small">1: Yes</span></div>';
 
               $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#003459"></span>';
+              $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#D7AF51"></span>';
               $output.='<span class="margin-left-8 small">2: No</span></div>';
               $output .= '</div>';
 
@@ -163,7 +167,7 @@ $output.='<div class="page-content-wrap ">';
                     $output.='<div class="text-center padding-top-30  font-size-14"  style="height: 340px;">';
                     $output .= '<div class="text-center" style="margin-bottom:24px">93% of respondents reported no commercial bias</div>';
                     $output.='<div><canvas id="dashboard-gauge"></canvas></div>';
-                    $output.='<div class="color-2DAAE1 font-size-18 font-bold"><span id="dashboard-gauge-font"></span></div>';
+                    $output.='<div style="color:#D7AF51" class="color-2DAAE1 font-size-18 font-bold"><span id="dashboard-gauge-font"></span></div>';
                     //$output.='<input class="knob" data-width="200" data-thickness=".3" data-angleOffset="270" data-angleArc="180" data-fgColor="#0173B2" value="90"/>';
                     $output.='</div>';
 
