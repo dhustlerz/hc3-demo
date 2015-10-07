@@ -8,7 +8,7 @@ $output = '';
      *
      */
 
-     $Navigation_text = "Pregnancy, Fertility and Breastfeeding";
+     $Navigation_text = "Module 1 - Pregnancy, Fertility and Breastfeeding";
      $output = top_navigation($Navigation_text);
     /**
      * START X-NAVIGATION VERTICAL 2
@@ -22,8 +22,8 @@ $output = '';
     $output.='<ul class="breadcrumb">';
       $output.='<li><a href="#">Program Evaluation</a></li>';
       $output.='<li class="active">Rheumatory</li>';
-      $output.='<li class="active">Module 1</li>';
-      $output.=choose_modules();
+      $output.='<li class="active">Module 1 - Pregnancy, Fertility and Breastfeeding</li>';
+      $output.=choose_modules('Module 1  ');
 
     $output.='</ul>';
 /**
@@ -38,17 +38,20 @@ $output.='<div class="page-content-wrap ">';
      $Ques_sent = array (
       'value' => 46 ,
       'label' => 'Total Programs',
+      'img'   => 'img/icons/cald-icon-rheumatory.png',
       );
       $Response_rate  = array (
       'value' => 165 ,
       'label' => 'Total Evaluations',
+      'img'   => 'img/icons/linegraph-icon-rheumatory.png',
       );
      $Responses = array (
       'value' => 217 ,
       'label' => 'Total Participants',
+      'img'   => 'img/icons/user-icon-rheumatory.png',
       );
 
-     $widget1 = widget1( $Ques_sent,  $Response_rate , $Responses);
+     $widget1 = widget1( $Ques_sent,  $Response_rate, $Responses);
      $output.= $widget1;
 
     /**
@@ -102,19 +105,20 @@ $output.='<div class="page-content-wrap ">';
                     $output.='<div class="col-md-2 "></div>';
                 $output.='</div>';
                 $output .= '<div class="row text-center">';
+                //colors:['#6E1612','#878369','#DA984C'],
                   $output .= '<div class="col-centered" style="margin-bottom:12px;">';
 
                   $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                  $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#BF2A2F"></span>';
-                  $output.='<span class="margin-left-8 small">1: Low</span></div>';
+                  $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#6E1612"></span>';
+                  $output.='<span class="margin-left-8 small">1: Less</span></div>';
 
                   $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                  $output.='<span class="glyphicon glyphicon-stop" aria-hidden="true" style="color:#D7AF51"></span>';
+                  $output.='<span class="glyphicon glyphicon-stop" aria-hidden="true" style="color:#878369"></span>';
                   $output.='<span class="margin-left-8 small">2: Equal</span></div>';
 
                   $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                  $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#6E1612"></span>';
-                  $output.='<span class="margin-left-8 small">3: High</span></div>';
+                  $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#DA984C"></span>';
+                  $output.='<span class="margin-left-8 small">1: More</span></div>';
 
                   $output .= '</div>';
 
@@ -160,18 +164,19 @@ $output.='<div class="page-content-wrap ">';
                 $output.='</div>';
                 $output .= '<div class="row text-center">';
                   $output .= '<div class="col-centered" style="margin-bottom:12px;">';
-
-                    $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                    $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#BF2A2F"></span>';
-                    $output.='<span class="margin-left-8 small">1: Low</span></div>';
-
-                    $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                    $output.='<span class="glyphicon glyphicon-stop" aria-hidden="true" style="color:#D7AF51"></span>';
-                    $output.='<span class="margin-left-8 small">2: Equal</span></div>';
+                  //colors:['#6E1612','#878369','#DA984C'],
 
                     $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
                     $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#6E1612"></span>';
-                    $output.='<span class="margin-left-8 small">3: High</span></div>';
+                    $output.='<span class="margin-left-8 small">1: Less</span></div>';
+
+                    $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+                    $output.='<span class="glyphicon glyphicon-stop" aria-hidden="true" style="color:#878369"></span>';
+                    $output.='<span class="margin-left-8 small">2: Equal</span></div>';
+
+                    $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+                    $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#DA984C"></span>';
+                    $output.='<span class="margin-left-8 small">1: More</span></div>';
 
                   $output .= '</div>';
                 $output.='</div>';
@@ -216,18 +221,18 @@ $output.='<div class="page-content-wrap ">';
                 $output.='</div>';
                 $output .= '<div class="row text-center">';
                   $output .= '<div class="col-centered" style="margin-bottom:12px;">';
+                  //colors:['#6E1612','#878369','#DA984C'],
+                    $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
+                    $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#6E1612"></span>';
+                    $output.='<span class="margin-left-8 small">1: Less</span></div>';
 
                     $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                    $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#BF2A2F"></span>';
-                    $output.='<span class="margin-left-8 small">1: Low</span></div>';
-
-                    $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                    $output.='<span class="glyphicon glyphicon-stop" aria-hidden="true" style="color:#D7AF51"></span>';
+                    $output.='<span class="glyphicon glyphicon-stop" aria-hidden="true" style="color:#878369"></span>';
                     $output.='<span class="margin-left-8 small">2: Equal</span></div>';
 
                     $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                    $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#6E1612"></span>';
-                    $output.='<span class="margin-left-8 small">3: High</span></div>';
+                    $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#DA984C"></span>';
+                    $output.='<span class="margin-left-8 small">1: More</span></div>';
 
                   $output .= '</div>';
                 $output.='</div>';

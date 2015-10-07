@@ -55,17 +55,20 @@ $output.='<div class="page-content-wrap ">';
      * START  Widgets 1
      */
 
-      $Ques_sent = array (
+     $Ques_sent = array (
       'value' => 121 ,
       'label' => 'Total Programs',
+      'img'   => 'img/icons/cald-icon.png',
       );
       $Response_rate  = array (
       'value' => 532 ,
       'label' => 'Total Evaluations',
+      'img'   => 'img/icons/linegraph-icon.png',
       );
      $Responses = array (
       'value' => 624 ,
       'label' => 'Total Participants',
+      'img'   => 'img/icons/user-icon.png',
       );
 
      $widget1 = widget1( $Ques_sent,  $Response_rate , $Responses);

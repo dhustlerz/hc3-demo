@@ -445,7 +445,7 @@ function addTextNode(attrs, text, _element) {
           height: 300,
           pieHole: 0.4,
           chartArea:{left:"",top:"10%",width:"70%",height:"70%"},
-          colors:['#BF2A2F', '#D7AF51', '#6E1612','#878369','#DA984C'],
+          colors:['#6E1612','#878369','#DA984C'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
@@ -470,7 +470,7 @@ function addTextNode(attrs, text, _element) {
           height: 300,
           pieHole: 0.4,
           chartArea:{left:"",top:"10%",width:"70%",height:"70%"},
-          colors:['#BF2A2F', '#D7AF51', '#6E1612','#878369','#DA984C'],
+          colors:['#6E1612','#878369','#DA984C'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
@@ -552,7 +552,7 @@ function addTextNode(attrs, text, _element) {
           height: 300,
           pieHole: 0.4,
           chartArea:{left:"",top:"10%",width:"70%",height:"70%"},
-          colors:['#BF2A2F', '#D7AF51', '#6E1612','#878369','#DA984C'],
+          colors:['#6E1612','#878369','#DA984C'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
@@ -577,7 +577,7 @@ function addTextNode(attrs, text, _element) {
           height: 300,
           pieHole: 0.4,
           chartArea:{left:"",top:"10%",width:"70%",height:"70%"},
-          colors:['#BF2A2F', '#D7AF51', '#6E1612','#878369','#DA984C'],
+          colors:['#6E1612','#878369','#DA984C'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
@@ -660,7 +660,7 @@ function addTextNode(attrs, text, _element) {
           height: 300,
           pieHole: 0.4,
           chartArea:{left:"",top:"10%",width:"70%",height:"70%"},
-          colors:['#BF2A2F', '#D7AF51', '#6E1612','#878369','#DA984C'],
+          colors:['#6E1612','#878369','#DA984C'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
@@ -685,7 +685,7 @@ function addTextNode(attrs, text, _element) {
           height: 300,
           pieHole: 0.4,
           chartArea:{left:"",top:"10%",width:"70%",height:"70%"},
-          colors:['#BF2A2F', '#D7AF51', '#6E1612','#878369','#DA984C'],
+          colors:['#6E1612','#878369','#DA984C'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 

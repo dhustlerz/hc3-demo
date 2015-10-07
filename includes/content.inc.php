@@ -22,7 +22,7 @@ $output = '';
     $output.='<li><a href="#">Program Evaluation</a></li>';
     $output.='<li class="active">Rheumatory</li>';
     $output.='<li class="active">All Programs</li>';
-    $output.=choose_modules();
+    $output.=choose_modules('--- Choose Module ---  ');
 
 
     $output.='</ul>';
@@ -43,14 +43,17 @@ $output.='<div class="page-content-wrap bu-rheumatory">';
      $Ques_sent = array (
       'value' => 121 ,
       'label' => 'Total Programs',
+      'img'   => 'img/icons/cald-icon-rheumatory.png',
       );
       $Response_rate  = array (
       'value' => 532 ,
       'label' => 'Total Evaluations',
+      'img'   => 'img/icons/linegraph-icon-rheumatory.png',
       );
      $Responses = array (
       'value' => 624 ,
       'label' => 'Total Participants',
+      'img'   => 'img/icons/user-icon-rheumatory.png',
       );
 
      $widget1 = widget1( $Ques_sent,  $Response_rate , $Responses);

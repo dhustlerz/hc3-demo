@@ -17,7 +17,7 @@ function widget1( $ques_sent, $responses, $response_rate) {
 
                       $output.='<div class="col-md-6 col-xs-6 " style="">';
                       /*--------------------------------------------------------------------------------------*/
-                        $output.='<div class=" padding-top-10 float-right"><img src="img/icons/cald-icon.png" alt="Mountain View" style="height:50px">';
+                        $output.='<div class=" padding-top-10 float-right"><img src="'.$ques_sent['img'].'" alt="Mountain View" style="height:50px">';
                         $output.='</div>';
                       /*--------------------------------------------------------------------------------------*/
                       $output.='</div>';
@@ -48,7 +48,7 @@ function widget1( $ques_sent, $responses, $response_rate) {
 
                     $output.='<div class="col-md-6 col-xs-6 " style="">';
                     /*--------------------------------------------------------------------------------------*/
-                      $output.='<div class=" padding-top-10 float-right"><img src="img/icons/linegraph-icon.png" alt="Mountain View" style="height:50px">';
+                      $output.='<div class=" padding-top-10 float-right"><img src="'.$responses['img'].'" alt="Mountain View" style="height:50px">';
                       $output.='</div>';
                     /*--------------------------------------------------------------------------------------*/
                     $output.='</div>';
@@ -77,7 +77,7 @@ function widget1( $ques_sent, $responses, $response_rate) {
 
                       $output.='<div class="col-md-6 col-xs-6 " style="">';
                       /*--------------------------------------------------------------------------------------*/
-                        $output.='<div class=" padding-top-10 float-right"><img src="img/icons/user-icon.png" alt="Mountain View" style="height:50px">';
+                        $output.='<div class=" padding-top-10 float-right"><img src="'.$response_rate['img'].'" alt="Mountain View" style="height:50px">';
                         $output.='</div>';
                       /*--------------------------------------------------------------------------------------*/
                       $output.='</div>';
@@ -250,15 +250,15 @@ function top_navigation($Navigation_text) {
     return $output;
 }
 
-function choose_modules() {
+function choose_modules($choose) {
   $output = '';
     $output.='<div class="float-right " >';
          // $output.='<li>';
 
             $output.='<div class="dropdown">';
-              $output.='<button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="false">';
+              $output.='<button class="btn btn-default selectpicker  btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="false">';
 
-                $output.='---- Choose ----     ';
+                $output.= $choose;
                 $output.='<span style="margin-left: 4px;" class="caret"></span>';
                 $output.='<span class="sr-only">Toggle Dropdown</span>';
 
