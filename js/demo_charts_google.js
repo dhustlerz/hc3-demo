@@ -12,17 +12,17 @@ function googlecharts() {
 
           var data = google.visualization.arrayToDataTable([
               ['Province', '' ],
-              ['AB', 0.11 ],
-              ['BC', 0.08],
-              ['MB', 0.22],
-              ['NB', 0.006],
-              ['ON', 0.23 ],
-              ['QC', 0.32 ],
-              ['SASK', 0.013],
+              ['AB', 18],
+              ['BC', 12],
+              ['MB', 3],
+              ['NB', 1],
+              ['ON', 35 ],
+              ['QC', 50 ],
+              ['SASK', 2],
 
 
           ]);
-          var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
+          var formatter = new google.visualization.NumberFormat({ pattern:'' });
           formatter.format(data, 1);
 
 
