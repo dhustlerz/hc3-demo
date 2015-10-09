@@ -3,348 +3,6 @@ googlecharts();
 // colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
 function googlecharts() {
 
-
-    /*
-     * Google Bar Province Chart Start
-     */
-      function googleBarProvinceChart() {
-          // just a normal ComboChart setup
-
-          var data = google.visualization.arrayToDataTable([
-              ['Province', '' ],
-              ['AB', 18],
-              ['BC', 12],
-              ['MB', 3],
-              ['NB', 1],
-              ['ON', 35 ],
-              ['QC', 50 ],
-              ['SASK', 2],
-
-
-          ]);
-          var formatter = new google.visualization.NumberFormat({ pattern:'' });
-          formatter.format(data, 1);
-
-
-          mydiv = $("#google-bar-province-chart");
-          chart = new google.visualization.BarChart(mydiv[0]);
-          chart.draw(data, {
-
-              legend: {position: 'none'},
-              vAxis: {format: "#.#%"},
-              bar: {groupWidth: "85%"},
-              vAxis:{gridlines: {count: 0}},
-              chartArea: {left: 120, top: 10,height:300},
-              focusTarget: 'category',
-              colors:['#003459']
-
-          });
-
-          /* Here comes the hack!
-          We're going to add a svg text element to each column bar.
-          This code will work for this data setup only. If you add/remove a series, this code must be adapted
-          */
-          rects = mydiv.find('svg > g > g > g > rect');
-          var row = 0;
-          for (i = 0; i < rects.length; i++) {
-              // this selector also retrieves gridlines
-              // we're excluding them by height
-              el = $(rects[i]);
-              if (parseFloat(el.attr("width")) <= 2) { continue; }
-              aparent = el.parent();
-              do { // skips 'null' values
-                  text = data.getValue(row++, 1);
-              } while (text == null && row < data.getNumberOfRows());
-
-              if (text) {
-                  text = formatter.formatValue(text);
-                  // see below
-                  pos = getElementPos(el);
-                  attrs = {x: pos.x + pos.width / 1+18, y: pos.y + 22,
-                           fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
-                  aparent.append(addTextNode(attrs, text, aparent));
-              }
-          }
-      }
-
-      google.load('visualization', '1', {packages: ['corechart']});
-      google.setOnLoadCallback(googleBarProvinceChart);
-
-      function getElementPos($el) {
-          // returns an object with the element position
-          return {
-              x: parseFloat($el.attr("x")),
-              width: parseFloat($el.attr("width")),
-              y: parseFloat($el.attr("y")),
-              height: parseFloat($el.attr("height"))
-          }
-      }
-
-      function addTextNode(attrs, text, _element) {
-          // creates an svg text node
-        var el = document.createElementNS('http://www.w3.org/2000/svg', "text");
-        for (var k in attrs) { el.setAttribute(k, attrs[k]); }
-        var textNode = document.createTextNode(text);
-        el.appendChild(textNode);
-        return el;
-      }
-      /*
-     * Google Bar Province Chart End
-     */
-
-
-    /*
-     * Google Pie Chart
-     */
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(googlePieChart);
-      function googlePieChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Fear of Needles', 'Hours per Day'],
-          ['Initiation Treatment',     19],
-          ['Patient Compliance',      14],
-          ['Medication Choice',  25],
-          ['Diet Exercise', 12],
-          ['Sleep',    30]
-        ]);
-
-        var options = {
-          height: 300,
-          chartArea:{left:"20%",top:"10%",width:"90%",height:"90%"},
-          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
-          legend: {  alignment: 'center',textStyle: {fontSize: 12} }
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('google-pie-chart'));
-
-        chart.draw(data, options);
-      }
-    /*
-     * Google Column chart
-     */
-     function drawVisualization() {
-    // just a normal ComboChart setup
-    var data = google.visualization.arrayToDataTable([
-        ['Month', '' ],
-        ['Self Learning', 0.25],
-        ['Online Courses', 0.18],
-        ['Symposia', 0.16],
-        ['Interactive Cases', 0.15],
-        ['Mixed topic education', 0.13],
-        ['Webinars', 0.11],
-        ['Others', 0.02],
-
-    ]);
-    var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
-    formatter.format(data, 1);
-
-
-    mydiv = $("#google-column-bar-chart");
-    chart = new google.visualization.ComboChart(mydiv[0]);
-    chart.draw(data, {
-         height: 300, seriesType: 'bars',
-        legend: {position: 'none'},
-        bar: {groupWidth: "55%"},
-        vAxis: {format: "#.#%"},
-        vAxis:{gridlines: {count: 0}},
-        chartArea: {left: 60, top: 30, width: 650},
-        focusTarget: 'category',
-        colors:['#5bbbff']
-
-    });
-
-    /* Here comes the hack!
-    We're going to add a svg text element to each column bar.
-    This code will work for this data setup only. If you add/remove a series, this code must be adapted
-    */
-    rects = mydiv.find('svg > g > g > g > rect');
-    var row = 0;
-    for (i = 0; i < rects.length; i++) {
-        // this selector also retrieves gridlines
-        // we're excluding them by height
-        el = $(rects[i]);
-        if (parseFloat(el.attr("height")) <= 2) { continue; }
-        aparent = el.parent();
-        do { // skips 'null' values
-            text = data.getValue(row++, 1);
-        } while (text == null && row < data.getNumberOfRows());
-
-        if (text) {
-            text = formatter.formatValue(text);
-            // see below
-            pos = getElementPos(el);
-            attrs = {x: pos.x + pos.width / 2, y: pos.y - 10,
-                     fill: 'black', 'font-family': 'Arial', 'font-size': 13, 'text-anchor': 'middle'};
-            aparent.append(addTextNode(attrs, text, aparent));
-        }
-    }
-}
-
-google.load('visualization', '1', {packages: ['corechart']});
-google.setOnLoadCallback(drawVisualization);
-
-function getElementPos($el) {
-    // returns an object with the element position
-    return {
-        x: parseFloat($el.attr("x")),
-        width: parseFloat($el.attr("width")),
-        y: parseFloat($el.attr("y")),
-        height: parseFloat($el.attr("height"))
-    }
-}
-
-function addTextNode(attrs, text, _element) {
-    // creates an svg text node
-  var el = document.createElementNS('http://www.w3.org/2000/svg', "text");
-  for (var k in attrs) { el.setAttribute(k, attrs[k]); }
-  var textNode = document.createTextNode(text);
-  el.appendChild(textNode);
-  return el;
-}
-    /* Google Column chart end */
-
-//var googleStackedChart = function() {
-  google.load("visualization", "1", {packages:["corechart"]});
-  google.setOnLoadCallback(drawGoogleStackedChart);
-  function drawGoogleStackedChart() {
-    // jQuery(window).resize(function(){
-    //   drawGoogleStackedChart();
-    // });
-  var data = google.visualization.arrayToDataTable([
-   ['B_UNIT', 'Cardiovascular', 'Asthama', 'CNS', 'Oncology',
-       'Diabetes',  { role: 'annotation' } ],
-      ['PEI', 10, 25, 45, 25, 18, ''],
-      ['NFLD', 15, 35, 55, 45, 16, ''],
-      ['NB', 20, 45, 65, 65, 55,  ''],
-      ['NS', 25, 55, 75, 85, 65, ''],
-      ['MB', 30, 65, 85, 102, 85, ''],
-      ['SASK',35, 75, 95, 125, 96,  ''],
-      ['BC', 40, 85, 105, 155, 99, ''],
-      ['AB', 45, 95, 115, 185, 105, ''],
-      ['OC', 50, 100, 125, 190, 115, ''],
-      ['ON', 55, 105, 135, 200, 125,  ''],
-
-    ]);
-    var view = new google.visualization.DataView(data);
-
-
-    var options = {
-
-      height: 300,
-      legend: { position: 'top', maxLines: 3 },
-      bar: { groupWidth: '85%' },
-      colors: ['#7A92A3','#0B62A4','#2DAAE1','#002840','#3C5B9B'],
-      isStacked: true,
-    };
-    var chart = new google.visualization.ColumnChart(document.getElementById("google-stacked-chart"));
-    chart.draw(view, options);
-  }
-//}
-//var googleHorizontalStackedChart = function() {
-  google.load("visualization", "1", {packages:["corechart"]});
-  google.setOnLoadCallback(drawGoogleHorizontalStackedChart);
-  function drawGoogleHorizontalStackedChart() {
-
-    var data = google.visualization.arrayToDataTable([
-            ['Meetings', 'Total Programs', 'Evaluation', { role: 'annotation' } ],
-            ['Adding Meal-Time Insulin to Basal Insulin', 7, 10, ''],
-            ['Different Pokes for Different Folks', 4, 22,  ''],
-            ['Endocrine Emergencies', 4, 19,  ''],
-            ['From Sliding Scale to Basal Bolus', 2, 40,  ''],
-            ['Insulin Empowerment Program', 5, 20,  ''],
-            ['Insulinothérapie: Mise à jour pour les infirmières en milieu ', 2, 30,  ''],
-            ['Lapproche motivationelle chez le patient diabetique', 2, 70,  ''],
-            ['La transition des patients DT1 en milieu adulte: Un cheminement', 1, 50,  ''],
-            ['le traitement du diabète chez la personne âgée', 1, 12,  ''],
-            ['Lignes directrices de pratique clinique 2013 de lACD: vole...', 1, 42,  ''],
-            ['Passer à un régime basal-prandial : Parcourir le labyrinthe de l...', 3, 32,  ''],
-            ['Practical Management of Diabetes in the Elderly', 3, 12,  ''],
-            ['Premix Insulin and Type 2 Diabetes', 2, 12,  '']
-
-    ]);
-
-        var view = new google.visualization.DataView(data);
-
-
-        var options = {
-          height: 270,
-          legend: { position: 'top', maxLines: 3 },
-          bar: { groupWidth: '65%' },
-          colors: ['#7A92A3','#0B62A4'],
-          isStacked: true,
-
-        };
-        var chart = new google.visualization.BarChart(document.getElementById("google-stacked-chart-diabetes"));
-        chart.draw(view, options);
-    }
-
-    google.load("visualization", "1", {packages:["corechart"]});
-    google.setOnLoadCallback(drawGoogleHorizontalStackedChartDiabetesAccr);
-    function drawGoogleHorizontalStackedChartDiabetesAccr() {
-
-    var data = google.visualization.arrayToDataTable([
-            ['Meetings', 'Total Programs', 'Evaluation', { role: 'annotation' } ],
-            ['Adding Meal-Time Insulin to Basal Insulin', 7, 10, ''],
-            ['Different Pokes for Different Folks', 4, 22,  ''],
-            ['Endocrine Emergencies', 4, 19,  ''],
-            ['From Sliding Scale to Basal Bolus', 2, 40,  ''],
-            ['Insulin Empowerment Program', 5, 20,  ''],
-            ['Insulinothérapie: Mise à jour pour les infirmières en milieu ', 2, 30,  ''],
-            ['Lapproche motivationelle chez le patient diabetique', 2, 70,  ''],
-            ['La transition des patients DT1 en milieu adulte: Un cheminement', 1, 50,  ''],
-            ['le traitement du diabète chez la personne âgée', 1, 12,  '']
-
-    ]);
-
-        var view = new google.visualization.DataView(data);
-
-
-        var options = {
-          height: 270,
-          legend: { position: 'top', maxLines: 3 },
-          bar: { groupWidth: '65%' },
-          colors: ['#7A92A3','#0B62A4'],
-          isStacked: true,
-
-        };
-        var chart = new google.visualization.BarChart(document.getElementById("google-stacked-chart-diabetes-acc"));
-        chart.draw(view, options);
-    }
-
-    google.load("visualization", "1", {packages:["corechart"]});
-    google.setOnLoadCallback(drawGoogleHorizontalStackedChartDiabetesNonAccr);
-    function drawGoogleHorizontalStackedChartDiabetesNonAccr() {
-    var data = google.visualization.arrayToDataTable([
-      ['Meetings', 'Total Programs', 'Evaluation', { role: 'annotation' } ],
-      ['Lignes directrices de pratique clinique 2013 de lACD: vole...', 1, 42,  ''],
-      ['Passer à un régime basal-prandial : Parcourir le labyrinthe de l...', 3, 32,  ''],
-      ['Practical Management of Diabetes in the Elderly', 3, 12,  ''],
-      ['Premix Insulin and Type 2 Diabetes', 2, 12,  '']
-
-
-
-    ]);
-
-
-        var view = new google.visualization.DataView(data);
-
-
-        var options = {
-          height: 270,
-          legend: { position: 'top', maxLines: 3 },
-          bar: { groupWidth: '65%' },
-          colors: ['#7A92A3','#0B62A4'],
-          isStacked: true,
-
-        };
-        var chart = new google.visualization.BarChart(document.getElementById("google-stacked-chart-diabetes-non-accr"));
-        chart.draw(view, options);
-//}
-    }
-
-
-
 /*
  * Business Unit: Rheumatory
  * Module: The Evolution of Rheumatoid Arthritis Common Barriers in RA Management Piecing Together Solutions.
@@ -378,18 +36,17 @@ function addTextNode(attrs, text, _element) {
       function eduObjGooglehBarQ1() {
           // just a normal ComboChart setup
           var data = google.visualization.arrayToDataTable([
-              ['I am not interested', '' ],
-              ['I see the need BUT…', 0.006 ],
-              ['I would like to learn more', 0.13],
-              ['I am ready to try this', 0.38],
-              ['I am doing this consis-tently', 0.43],
+              ['Title', '' ],
+              ['I would like to learn more', 0.02],
+              ['I am ready to try this', 0.236],
+              ['I am doing this consis-tently', 0.743],
 
           ]);
           var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
           formatter.format(data, 1);
 
 
-          mydiv = $("#edu-obj-google-hBar-m1-q1");
+          mydiv = $("#edu-obj-google-hBar-m2-q1");
           chart = new google.visualization.ComboChart(mydiv[0]);
           chart.draw(data, {
             height: 300, seriesType: 'bars',
@@ -437,8 +94,8 @@ function addTextNode(attrs, text, _element) {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      30],
-          ['High',  95],
+          ['Equal',      48],
+          ['High',  92],
         ]);
 
         var options = {
@@ -449,7 +106,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m1-q1-pt-1'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q1-pt-1'));
 
         chart.draw(data, options);
       }
@@ -462,8 +119,8 @@ function addTextNode(attrs, text, _element) {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      34],
-          ['High',  91],
+          ['Equal',      54],
+          ['High',  88],
         ]);
 
         var options = {
@@ -474,7 +131,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m1-q1-pt-2'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q1-pt-2'));
 
         chart.draw(data, options);
       }
@@ -487,17 +144,17 @@ function addTextNode(attrs, text, _element) {
           // just a normal ComboChart setup
           var data = google.visualization.arrayToDataTable([
               ['I am not interested', '' ],
-              ['I see the need BUT…', 0.006 ],
-              ['I would like to learn more', 0.16],
-              ['I am ready to try this', 0.34],
-              ['I am doing this consis-tently', 0.43],
+              //['I see the need BUT…', 0.006 ],
+              ['I would like to learn more', 0.085],
+              ['I am ready to try this', 0.25],
+              ['I am doing this consis-tently', 0.664],
 
           ]);
           var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
           formatter.format(data, 1);
 
 
-          mydiv = $("#edu-obj-google-hBar-m1-q2");
+          mydiv = $("#edu-obj-google-hBar-m2-q2");
           chart = new google.visualization.ComboChart(mydiv[0]);
           chart.draw(data, {
             height: 300, seriesType: 'bars',
@@ -544,8 +201,8 @@ function addTextNode(attrs, text, _element) {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      30],
-          ['High',  100],
+          ['Equal',      54],
+          ['High',  88],
         ]);
 
         var options = {
@@ -556,7 +213,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m1-q2-pt-1'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q2-pt-1'));
 
         chart.draw(data, options);
       }
@@ -569,8 +226,8 @@ function addTextNode(attrs, text, _element) {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      27],
-          ['High',  95],
+          ['Equal',      54],
+          ['High',  89],
         ]);
 
         var options = {
@@ -581,7 +238,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m1-q2-pt-2'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q2-pt-2'));
 
         chart.draw(data, options);
       }
@@ -595,17 +252,17 @@ function addTextNode(attrs, text, _element) {
           // just a normal ComboChart setup
           var data = google.visualization.arrayToDataTable([
               ['I am not interested', '' ],
-              ['I see the need BUT…', 0.006 ],
-              ['I would like to learn more', 0.14],
-              ['I am ready to try this', 0.41],
-              ['I am doing this consis-tently', 0.39],
+             // ['I see the need BUT…', 0.006 ],
+              ['I would like to learn more', 0.078],
+              ['I am ready to try this', 0.405],
+              ['I am doing this consis-tently', 0.516],
 
           ]);
           var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
           formatter.format(data, 1);
 
 
-          mydiv = $("#edu-obj-google-hBar-m1-q3");
+          mydiv = $("#edu-obj-google-hBar-m2-q3");
           chart = new google.visualization.ComboChart(mydiv[0]);
           chart.draw(data, {
             height: 300, seriesType: 'bars',
@@ -651,9 +308,9 @@ function addTextNode(attrs, text, _element) {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Low',     0],
-          ['Equal',      27],
-          ['High',  95],
+          ['Low',     1],
+          ['Equal',      33],
+          ['High',  105],
         ]);
 
         var options = {
@@ -664,7 +321,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m1-q3-pt-1'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q3-pt-1'));
 
         chart.draw(data, options);
       }
@@ -677,7 +334,7 @@ function addTextNode(attrs, text, _element) {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      35],
+          ['Equal',      59],
           ['High',  88],
         ]);
 
@@ -689,7 +346,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m1-q3-pt-2'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q3-pt-2'));
 
         chart.draw(data, options);
       }
@@ -705,12 +362,12 @@ function addTextNode(attrs, text, _element) {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Strongly Disagree',     2],
+          ['Strongly Disagree',     1],
           ['Disagree',     0],
           ['Somewhat Disagree',     0],
-          ['Neutral',      1],
-          ['Somewhat Agree',  9],
-          ['Agree',       49],
+          ['Neutral',      0],
+          ['Somewhat Agree',  10],
+          ['Agree',       57],
           ['Strongly Agree',    88]
         ]);
 
@@ -721,7 +378,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m1-q4'));
+        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m2-q4'));
 
         chart.draw(data, options);
       }
@@ -734,13 +391,13 @@ function addTextNode(attrs, text, _element) {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Strongly Disagree',     2],
+          ['Strongly Disagree',     1],
           ['Disagree',     0],
           ['Somewhat Disagree',     0],
-          ['Neutral',      0],
-          ['Somewhat Agree',  10],
-          ['Agree',       53],
-          ['Strongly Agree',    88]
+          ['Neutral',      3],
+          ['Somewhat Agree',  14],
+          ['Agree',       60],
+          ['Strongly Agree',    78]
         ]);
 
         var options = {
@@ -750,7 +407,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m1-q5'));
+        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m2-q5'));
 
         chart.draw(data, options);
       }
@@ -763,13 +420,13 @@ function addTextNode(attrs, text, _element) {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Strongly Disagree',     2],
+          ['Strongly Disagree',     1],
           ['Disagree',     0],
           ['Somewhat Disagree',     0],
-          ['Neutral',      1],
-          ['Somewhat Agree',  2],
-          ['Agree',       50],
-          ['Strongly Agree',    97]
+          ['Neutral',      2],
+          ['Somewhat Agree',  5],
+          ['Agree',       58],
+          ['Strongly Agree',    91]
         ]);
 
         var options = {
@@ -779,7 +436,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m1-q6'));
+        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m2-q6'));
 
         chart.draw(data, options);
       }
@@ -791,13 +448,13 @@ function addTextNode(attrs, text, _element) {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Strongly Disagree',     2],
+          ['Strongly Disagree',     3],
           ['Disagree',     0],
           ['Somewhat Disagree',     0],
-          ['Neutral',      4],
-          ['Somewhat Agree',  5],
-          ['Agree',       45],
-          ['Strongly Agree',    93]
+          ['Neutral',      0],
+          ['Somewhat Agree',  2],
+          ['Agree',       44],
+          ['Strongly Agree',    96]
         ]);
 
         var options = {
@@ -809,7 +466,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-m1-q9'));
+        var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-m2-q9'));
 
         chart.draw(data, options);
       }
@@ -821,13 +478,13 @@ function addTextNode(attrs, text, _element) {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Strongly Disagree',     2],
+          ['Strongly Disagree',     3],
           ['Disagree',     0],
           ['Somewhat Disagree',     0],
-          ['Neutral',      6],
-          ['Somewhat Agree',  5],
-          ['Agree',       46],
-          ['Strongly Agree',    87]
+          ['Neutral',      2],
+          ['Somewhat Agree',  3],
+          ['Agree',       54],
+          ['Strongly Agree',    83]
         ]);
 
         var options = {
@@ -838,7 +495,7 @@ function addTextNode(attrs, text, _element) {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-m1-q10'));
+        var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-m2-q10'));
 
         chart.draw(data, options);
       }

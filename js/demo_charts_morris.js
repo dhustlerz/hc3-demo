@@ -16,7 +16,7 @@ var morrisCharts = function() {
       labels: ['Annual Totals'],
       resize: true,
       xLabels: 'year',
-      lineColors: ['#BF2A2F'],
+      lineColors: ['#003459'],
       // xLabelFormat : function (x) {
       //   return months[x.getMonth()];
       //   }

@@ -267,7 +267,7 @@ function choose_modules($choose) {
               $output.='<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">';
 
                 $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="program-evaluation.php?p=rheumatory&t=all">Module 1</a></li>';
-                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 2</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="program-evaluation.php?p=rheumatory&mod=2">Module 2</a></li>';
                 $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 3</a></li>';
                 $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 4</a></li>';
                 $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 5</a></li>';

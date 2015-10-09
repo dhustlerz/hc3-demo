@@ -20,10 +20,10 @@
              {
                 include 'rheumatoiry/content-rheumatory.inc.php';
              }
-             // elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&t=accr')
-             // {
-             //    include 'content-rheumatory-accr.inc.php';
-             // }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=2')
+             {
+                include 'rheumatoiry/content-rheumatory-mod-2.inc.php';
+             }
              // elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&t=non-accr')
              // {
              //    include 'content-rheumatory-non-accr.inc.php';
@@ -45,4 +45,20 @@
         -->
         <?php
         include 'javascript.inc.php' ;
+        echo '<script type="text/javascript" src="includes/rheumatoiry/js/content-rheumatory-mod-2.js"></script>' ;
+        if ($request_URI == '/hc3-demo/overview.php') {
+                //include 'javascript.inc.php' ;
+             }
+             elseif ($request_URI == '/hc3-demo/needs-assessment.php') {
+                //include 'javascript.inc.php' ;
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&t=all')
+             {
+               //include 'javascript.inc.php' ;
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=2')
+             {
+                echo '<script type="text/javascript" src="includes/rheumatoiry/js/content-rheumatory-mod-2.js"></script>' ;
+             }
+
         ?>
