@@ -268,9 +268,10 @@ function choose_modules($choose) {
 
                 $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="program-evaluation.php?p=rheumatory&t=all">Module 1</a></li>';
                 $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="program-evaluation.php?p=rheumatory&mod=2">Module 2</a></li>';
-                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 3</a></li>';
-                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 4</a></li>';
-                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Module 5</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="program-evaluation.php?p=rheumatory&mod=3">Module 3</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="program-evaluation.php?p=rheumatory&mod=4">Module 4</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="program-evaluation.php?p=rheumatory&mod=5">Module 5</a></li>';
+                $output.='<li role="presentation"><a role="menuitem" tabindex="-1" href="program-evaluation.php?p=rheumatory&mod=6">Module 6</a></li>';
               $output.='</ul>';
 
             $output.='</div>';

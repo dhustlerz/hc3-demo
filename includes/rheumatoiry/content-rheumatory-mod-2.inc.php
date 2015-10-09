@@ -307,7 +307,7 @@ $output.='<div class="page-content-wrap ">';
                 $output.='<span class="margin-left-8 small">5: Somewhat Agree</span></div>';
 
                 $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#005fa3"></span>';
+                $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#D9D9D9"></span>';
                 $output.='<span class="margin-left-8 small">6: Agree</span></div>';
 
                 $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
@@ -413,7 +413,7 @@ $output.='<div class="page-content-wrap ">';
                 $output.='<span class="margin-left-8 small">5: Somewhat Agree</span></div>';
 
                 $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#005fa3"></span>';
+                $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#D9D9D9"></span>';
                 $output.='<span class="margin-left-8 small">6: Agree</span></div>';
 
                 $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
@@ -464,7 +464,7 @@ $output.='<div class="page-content-wrap ">';
                 $output.='<span class="margin-left-8 small">5: Somewhat Agree</span></div>';
 
                 $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';
-                $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#005fa3"></span>';
+                $output.='<span class="glyphicon glyphicon-stop " aria-hidden="true" style="color:#D9D9D9"></span>';
                 $output.='<span class="margin-left-8 small">6: Agree</span></div>';
 
                 $output.='<div class="dashpage-chart-legend-item float-left margin-left-24">';

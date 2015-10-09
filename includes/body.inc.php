@@ -24,6 +24,22 @@
              {
                 include 'rheumatoiry/content-rheumatory-mod-2.inc.php';
              }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=3')
+             {
+                include 'rheumatoiry/content-rheumatory-mod-3.inc.php';
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=4')
+             {
+                include 'rheumatoiry/content-rheumatory-mod-4.inc.php';
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=5')
+             {
+                include 'rheumatoiry/content-rheumatory-mod-5.inc.php';
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=6')
+             {
+                include 'rheumatoiry/content-rheumatory-mod-6.inc.php';
+             }
              // elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&t=non-accr')
              // {
              //    include 'content-rheumatory-non-accr.inc.php';
@@ -45,7 +61,7 @@
         -->
         <?php
         include 'javascript.inc.php' ;
-        echo '<script type="text/javascript" src="includes/rheumatoiry/js/content-rheumatory-mod-2.js"></script>' ;
+
         if ($request_URI == '/hc3-demo/overview.php') {
                 //include 'javascript.inc.php' ;
              }
@@ -59,6 +75,22 @@
              elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=2')
              {
                 echo '<script type="text/javascript" src="includes/rheumatoiry/js/content-rheumatory-mod-2.js"></script>' ;
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=3')
+             {
+                echo '<script type="text/javascript" src="includes/rheumatoiry/js/content-rheumatory-mod-3.js"></script>' ;
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=4')
+             {
+                echo '<script type="text/javascript" src="includes/rheumatoiry/js/content-rheumatory-mod-4.js"></script>' ;
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=5')
+             {
+                echo '<script type="text/javascript" src="includes/rheumatoiry/js/content-rheumatory-mod-5.js"></script>' ;
+             }
+             elseif($request_URI == '/hc3-demo/program-evaluation.php?p=rheumatory&mod=6')
+             {
+                echo '<script type="text/javascript" src="includes/rheumatoiry/js/content-rheumatory-mod-6.js"></script>' ;
              }
 
         ?>

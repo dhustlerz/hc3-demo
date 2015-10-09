@@ -36,17 +36,17 @@ function googlecharts() {
           // just a normal ComboChart setup
           var data = google.visualization.arrayToDataTable([
               ['I am not interested', '' ],
-              ['I see the need BUT…', 0.006 ],
-              ['I would like to learn more', 0.13],
-              ['I am ready to try this', 0.38],
-              ['I am doing this consis-tently', 0.43],
+              ['I see the need BUT…', 0.020 ],
+              ['I would like to learn more', 0.163],
+              ['I am ready to try this', 0.265],
+              ['I am doing this consis-tently', 0.551],
 
           ]);
           var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
           formatter.format(data, 1);
 
 
-          mydiv = $("#edu-obj-google-hBar-m2-q1");
+          mydiv = $("#edu-obj-google-hBar-m5-q1");
           chart = new google.visualization.ComboChart(mydiv[0]);
           chart.draw(data, {
             height: 300, seriesType: 'bars',
@@ -94,8 +94,8 @@ function googlecharts() {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      30],
-          ['High',  95],
+          ['Equal',      17],
+          ['High',  23],
         ]);
 
         var options = {
@@ -106,7 +106,7 @@ function googlecharts() {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q1-pt-1'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m5-q1-pt-1'));
 
         chart.draw(data, options);
       }
@@ -119,8 +119,8 @@ function googlecharts() {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      34],
-          ['High',  91],
+          ['Equal',      13],
+          ['High',  27],
         ]);
 
         var options = {
@@ -131,7 +131,7 @@ function googlecharts() {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q1-pt-2'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m5-q1-pt-2'));
 
         chart.draw(data, options);
       }
@@ -144,17 +144,17 @@ function googlecharts() {
           // just a normal ComboChart setup
           var data = google.visualization.arrayToDataTable([
               ['I am not interested', '' ],
-              ['I see the need BUT…', 0.006 ],
-              ['I would like to learn more', 0.16],
-              ['I am ready to try this', 0.34],
-              ['I am doing this consis-tently', 0.43],
+              ['I see the need BUT…', 0.022 ],
+              ['I would like to learn more', 0.088],
+              ['I am ready to try this', 0.266],
+              ['I am doing this consis-tently', 0.622],
 
           ]);
           var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
           formatter.format(data, 1);
 
 
-          mydiv = $("#edu-obj-google-hBar-m2-q2");
+          mydiv = $("#edu-obj-google-hBar-m5-q2");
           chart = new google.visualization.ComboChart(mydiv[0]);
           chart.draw(data, {
             height: 300, seriesType: 'bars',
@@ -201,8 +201,8 @@ function googlecharts() {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      30],
-          ['High',  100],
+          ['Equal',      12],
+          ['High',  31],
         ]);
 
         var options = {
@@ -213,7 +213,7 @@ function googlecharts() {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q2-pt-1'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m5-q2-pt-1'));
 
         chart.draw(data, options);
       }
@@ -226,8 +226,8 @@ function googlecharts() {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      27],
-          ['High',  95],
+          ['Equal',      13],
+          ['High',  24],
         ]);
 
         var options = {
@@ -238,7 +238,7 @@ function googlecharts() {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q2-pt-2'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m5-q2-pt-2'));
 
         chart.draw(data, options);
       }
@@ -252,17 +252,17 @@ function googlecharts() {
           // just a normal ComboChart setup
           var data = google.visualization.arrayToDataTable([
               ['I am not interested', '' ],
-              ['I see the need BUT…', 0.006 ],
-              ['I would like to learn more', 0.14],
-              ['I am ready to try this', 0.41],
-              ['I am doing this consis-tently', 0.39],
+              ['I see the need BUT…', 0.024 ],
+              ['I would like to learn more', 0.073],
+              ['I am ready to try this', 0.170],
+              ['I am doing this consis-tently', 0.731],
 
           ]);
           var formatter = new google.visualization.NumberFormat({ pattern:'#.#%' });
           formatter.format(data, 1);
 
 
-          mydiv = $("#edu-obj-google-hBar-m2-q3");
+          mydiv = $("#edu-obj-google-hBar-m5-q3");
           chart = new google.visualization.ComboChart(mydiv[0]);
           chart.draw(data, {
             height: 300, seriesType: 'bars',
@@ -309,8 +309,8 @@ function googlecharts() {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      27],
-          ['High',  95],
+          ['Equal',      18],
+          ['High',  27],
         ]);
 
         var options = {
@@ -321,7 +321,7 @@ function googlecharts() {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q3-pt-1'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m5-q3-pt-1'));
 
         chart.draw(data, options);
       }
@@ -334,8 +334,8 @@ function googlecharts() {
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
           ['Low',     0],
-          ['Equal',      35],
-          ['High',  88],
+          ['Equal',      7],
+          ['High',  25],
         ]);
 
         var options = {
@@ -346,7 +346,7 @@ function googlecharts() {
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m2-q3-pt-2'));
+        var chart = new google.visualization.PieChart(document.getElementById('edu-obj-google-donut-m5-q3-pt-2'));
 
         chart.draw(data, options);
       }
@@ -354,7 +354,7 @@ function googlecharts() {
 
 
 
-        // Question 4
+     // Question 4
 
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(programGooglePieQ4);
@@ -362,21 +362,23 @@ function googlecharts() {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Strongly Disagree',     2],
-          ['Neutral',      1],
-          ['Somewhat Agree',  9],
-          ['Agree',       49],
-          ['Strongly Agree',    88]
+          ['Strongly Disagree',     0],
+          ['Disagree',     0],
+          ['Somewhat Disagree',     0],
+          ['Neutral',      2],
+          ['Somewhat Agree',  1],
+          ['Agree',       14],
+          ['Strongly Agree',    29]
         ]);
 
         var options = {
           height: 300,
           chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
-          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          colors:['#5bbbff', '#cae9ff','#e9ffca','#cacfff','#005fa3','#D9D9D9','#003459'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m2-q4'));
+        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m5-q4'));
 
         chart.draw(data, options);
       }
@@ -389,21 +391,23 @@ function googlecharts() {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Strongly Disagree',     2],
+          ['Strongly Disagree',     0],
+          ['Disagree',     0],
+          ['Somewhat Disagree',     0],
           ['Neutral',      0],
-          ['Somewhat Agree',  10],
-          ['Agree',       53],
-          ['Strongly Agree',    88]
+          ['Somewhat Agree',  4],
+          ['Agree',       15],
+          ['Strongly Agree',    28]
         ]);
 
         var options = {
           height: 300,
           chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
-          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          colors:['#5bbbff', '#cae9ff','#e9ffca','#cacfff','#005fa3','#D9D9D9','#003459'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m2-q5'));
+        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m5-q5'));
 
         chart.draw(data, options);
       }
@@ -416,21 +420,23 @@ function googlecharts() {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Strongly Disagree',     2],
+          ['Strongly Disagree',     0],
+          ['Disagree',     0],
+          ['Somewhat Disagree',     0],
           ['Neutral',      1],
-          ['Somewhat Agree',  2],
-          ['Agree',       50],
-          ['Strongly Agree',    97]
+          ['Somewhat Agree',  0],
+          ['Agree',       19],
+          ['Strongly Agree',    28]
         ]);
 
         var options = {
           height: 300,
           chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
-          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          colors:['#5bbbff', '#cae9ff','#e9ffca','#cacfff','#005fa3','#D9D9D9','#003459'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m2-q6'));
+        var chart = new google.visualization.PieChart(document.getElementById('program-google-pie-m5-q6'));
 
         chart.draw(data, options);
       }
@@ -442,11 +448,13 @@ function googlecharts() {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Strongly Disagree',     2],
-          ['Neutral',      4],
-          ['Somewhat Agree',  5],
-          ['Agree',       45],
-          ['Strongly Agree',    93]
+          ['Strongly Disagree',     0],
+          ['Disagree',     0],
+          ['Somewhat Disagree',     0],
+          ['Neutral',      0],
+          ['Somewhat Agree',  0],
+          ['Agree',       8],
+          ['Strongly Agree',    33]
         ]);
 
         var options = {
@@ -454,11 +462,11 @@ function googlecharts() {
           pieHole: 0.4,
           chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
           // colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
-          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          colors:['#5bbbff', '#cae9ff','#e9ffca','#cacfff','#005fa3','#D9D9D9','#003459'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-m2-q9'));
+        var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-m5-q9'));
 
         chart.draw(data, options);
       }
@@ -470,22 +478,24 @@ function googlecharts() {
 
         var data = google.visualization.arrayToDataTable([
           ['Fear of Needles', 'Hours per Day'],
-          ['Strongly Disagree',     2],
-          ['Neutral',      6],
-          ['Somewhat Agree',  5],
-          ['Agree',       46],
-          ['Strongly Agree',    87]
+          ['Strongly Disagree',     0],
+          ['Disagree',     0],
+          ['Somewhat Disagree',     0],
+          ['Neutral',      0],
+          ['Somewhat Agree',  0],
+          ['Agree',       12],
+          ['Strongly Agree',    30]
         ]);
 
         var options = {
           pieHole: 0.4,
           height: 300,
           chartArea:{left:"",top:"10%",width:"80%",height:"80%"},
-          colors:['#5bbbff', '#cae9ff', '#005fa3','#D9D9D9','#003459'],
+          colors:['#5bbbff', '#cae9ff','#e9ffca','#cacfff','#005fa3','#D9D9D9','#003459'],
           legend: {  alignment: 'end',textStyle: {fontSize: 12} ,position: 'none' }
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-m2-q10'));
+        var chart = new google.visualization.PieChart(document.getElementById('speaker-google-donut-m5-q10'));
 
         chart.draw(data, options);
       }
