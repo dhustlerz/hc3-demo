@@ -441,7 +441,7 @@ body.page-container-boxed .page-container {
   border-bottom: 0px;
 }
 .x-navigation.x-navigation-horizontal {
-  height: 50px;
+  min-height: 50px;
   background: #ffffff;
 }
 .x-navigation.x-navigation-horizontal .xn-logo a {
@@ -7254,7 +7254,7 @@ li.ext_zip {
     background: #33414e;
   }
   .x-navigation.x-navigation-panel {
-    height: 50px;
+    min-height: 50px;
     max-height: auto;
     overflow: visible;
   }
